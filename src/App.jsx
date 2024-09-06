@@ -1,5 +1,16 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import ErrorPage from './pages/ErrorPage';
+
 function App() {
-  return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="*" element={<ErrorPage />} />
+      </Routes>
+    </Router>
+  );
 }
 
 export default App;
