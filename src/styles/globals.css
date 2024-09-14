@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  @apply w-full relative bg-[url('./assets/texture.jpg')] bg-[length:64px_64px] bg-repeat bg-fixed;
+  @apply w-full relative bg-[url('./assets/texture.jpg')] bg-[length:64px_64px] bg-repeat bg-fixed text-custom-text;
 }
 
 body::before {

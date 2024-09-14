@@ -9,9 +9,12 @@ const ProfileCard = () => {
       <h1 className="pt-8 text-4xl uppercase font-semibold tracking-wide">
         Elea Pimouguet
       </h1>
-      <h2 className="text-xl">Développeuse Web Full Stack</h2>
-      <div className="workstatus flex items-center pt-7">
-        <div className="h-2.5 w-2.5 mt-0.5 mr-2 rounded-full bg-green-500"></div>
+      <h2 className="text-xl pb-7">Développeuse Web Full Stack</h2>
+      <div className="workstatus flex items-center">
+        <span className="relative flex h-3 w-3 mr-2">
+          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-lime-500 opacity-75"></span>
+          <span className="relative inline-flex rounded-full h-3 w-3 bg-lime-500"></span>
+        </span>
         <span>Available for work</span>
       </div>
     </div>
