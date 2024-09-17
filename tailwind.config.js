@@ -7,7 +7,7 @@ export default {
         sans: ['Poppins', 'Arial', 'sans-serif'],
       },
       colors: {
-        'custom-text': '#0B1215',
+        'custom-text': '#313132',
       },
     },
   },

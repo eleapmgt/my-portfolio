@@ -1,4 +1,7 @@
+import MapCard from '../MapCard';
 import ProfileCard from '../ProfileCard';
+import IconCard from '../IconCard';
+import CurriculumCard from '../CurriculumCard';
 
 const Grid = () => {
   return (
@@ -8,22 +11,33 @@ const Grid = () => {
     >
       <section
         id="profile-grid"
-        className="grid w-full grid-cols-11 grid-rows-[repeat(7,_6.7rem)] gap-5"
+        className="grid w-full grid-cols-11 grid-rows-[repeat(7,_6rem)] gap-5"
       >
         <ProfileCard />
         <div className="col-span-2 row-span-3 grid h-full w-full grid-cols-1 grid-rows-2 gap-5">
-          <div className="col-span-1 row-span-1 custom-card"></div>
-          <div className="col-span-1 row-span-1 custom-card"></div>
+          <MapCard />
+          <IconCard
+            iconSrc="/icons/mail-black.png"
+            alt="Icône de contact par mail"
+          />
         </div>
         <div className="col-span-4 row-span-3 grid h-full w-full grid-cols-1 grid-rows-2 gap-5">
-          <div className="col-span-1 row-span-1 custom-card"></div>
+          <CurriculumCard />
           <div className="col-span-1 row-span-1 custom-card"></div>
         </div>
         <div className="col-span-7 row-span-1 custom-card"></div>
         <div className="col-span-4 row-span-4 custom-card"></div>
         <div className="col-span-2 row-span-3 grid h-full w-full grid-cols-1 grid-rows-2 gap-5">
-          <div className="col-span-2 row-span-1 custom-card"></div>
-          <div className="col-span-2 row-span-1 custom-card"></div>
+          <IconCard
+            colSpan="col-span-2"
+            iconSrc="/icons/github-black.png"
+            alt="Icône de Github"
+          />
+          <IconCard
+            colSpan="col-span-2"
+            iconSrc="/icons/linkedin-black.png"
+            alt="Icône de Linkedin"
+          />
         </div>
         <div className="col-span-5 row-span-3 custom-card"></div>
       </section>

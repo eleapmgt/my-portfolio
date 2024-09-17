@@ -6,7 +6,7 @@ const ProfileCard = () => {
         alt="Avatar"
         className="h-32 w-32 border-4 rounded-full border-white shadow-md"
       />
-      <h1 className="pt-8 text-4xl uppercase font-semibold tracking-wide">
+      <h1 className="pt-5 text-4xl uppercase font-semibold tracking-wide">
         Elea Pimouguet
       </h1>
       <h2 className="text-xl pb-7">Développeuse Web Full Stack</h2>
