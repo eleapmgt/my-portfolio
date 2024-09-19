@@ -44,19 +44,18 @@ body::after {
   pointer-events: none;
 }
 
-@keyframes sway {
-  0%,
-  100% {
-    transform: rotate(-5deg);
+@layer base {
+  h3 {
+    @apply text-[18px];
   }
-  50% {
-    transform: rotate(5deg);
+  span {
+    @apply text-[14px];
   }
 }
 
 @layer utilities {
   .custom-card {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.6);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
@@ -64,7 +63,17 @@ body::after {
     border: 1px solid rgba(255, 255, 255, 0.3);
   }
 
-  .animate-sway {
-    animation: sway 1s ease-in-out infinite;
+  .cursor-right {
+    cursor:
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24' color='%23313132' fill='none'%3E%3Cpath d='M9.00005 6C9.00005 6 15 10.4189 15 12C15 13.5812 9 18 9 18' stroke='currentColor' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")
+        12 12,
+      auto;
+  }
+
+  .cursor-left {
+    cursor:
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24' color='%23313132' fill='none'%3E%3Cpath d='M15 6C15 6 9.00001 10.4189 9 12C8.99999 13.5812 15 18 15 18' stroke='currentColor' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")
+        12 12,
+      auto;
   }
 }

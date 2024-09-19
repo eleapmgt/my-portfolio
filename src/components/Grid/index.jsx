@@ -2,6 +2,8 @@ import MapCard from '../MapCard';
 import ProfileCard from '../ProfileCard';
 import IconCard from '../IconCard';
 import CurriculumCard from '../CurriculumCard';
+import TogglerCard from '../TogglerCard';
+import EducationCard from '../EducationCard';
 
 const Grid = () => {
   return (
@@ -18,25 +20,25 @@ const Grid = () => {
           <MapCard />
           <IconCard
             iconSrc="/icons/mail-black.png"
-            alt="Icône de contact par mail"
+            description="Icône de contact par mail"
           />
         </div>
         <div className="col-span-4 row-span-3 grid h-full w-full grid-cols-1 grid-rows-2 gap-5">
           <CurriculumCard />
-          <div className="col-span-1 row-span-1 custom-card"></div>
+          <TogglerCard />
         </div>
         <div className="col-span-7 row-span-1 custom-card"></div>
-        <div className="col-span-4 row-span-4 custom-card"></div>
+        <EducationCard />
         <div className="col-span-2 row-span-3 grid h-full w-full grid-cols-1 grid-rows-2 gap-5">
           <IconCard
             colSpan="col-span-2"
             iconSrc="/icons/github-black.png"
-            alt="Icône de Github"
+            description="Icône de Github"
           />
           <IconCard
             colSpan="col-span-2"
             iconSrc="/icons/linkedin-black.png"
-            alt="Icône de Linkedin"
+            description="Icône de Linkedin"
           />
         </div>
         <div className="col-span-5 row-span-3 custom-card"></div>

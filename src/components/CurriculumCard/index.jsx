@@ -11,8 +11,8 @@ const CurriculumCard = () => {
   return (
     <div className="col-span-1 row-span-1 flex items-center justify-between custom-card">
       <div className="flex flex-col pl-9">
-        <h3 className="font-semibold uppercase text-lg">Curriculum Vitae</h3>
-        <span className="">2024</span>
+        <h3 className="font-bold uppercase text-lg">Curriculum Vitae</h3>
+        <span>2024</span>
       </div>
       <div className="flex flex-row items-center gap-4 pr-9">
         <motion.div
@@ -21,6 +21,8 @@ const CurriculumCard = () => {
           initial={{ scale: 1 }}
           animate={isPlaying ? { scale: 1.1 } : { scale: 1 }}
           transition={{ duration: 0.3 }}
+          role="img"
+          aria-label="Animation de téléchargement du CV"
         >
           <Lottie
             loop
@@ -37,13 +39,15 @@ const CurriculumCard = () => {
           initial={{ scale: 1 }}
           animate={isBlinking ? { scale: 1.1 } : { scale: 1 }}
           transition={{ duration: 0.3 }}
+          role="img"
+          aria-label="Animation d'un oeil clignant pour visualiser le CV"
         >
           <Lottie
             loop
             animationData={blinkingAnimation}
             play={isBlinking}
             speed={1}
-            style={{ height: '40px', width: '40px' }}
+            style={{ height: '35px', width: '35px' }}
             goTo={0}
           />
         </motion.div>

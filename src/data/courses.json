@@ -1,0 +1,22 @@
+[
+  {
+    "organisation": "OpenClassrooms",
+    "title": "Développement Web",
+    "year": "2024",
+    "description": "Conception de sites web responsives et dynamiques, développement d'API et de bases de données, optimisation SEO et gestion de projets web, avec une expertise en React, Node.js et MongoDB.",
+    "icon": "/icons/openclassrooms.png"
+  },
+  {
+    "organisation": "Autodidacte",
+    "year": "2022 - Aujourd'hui",
+    "description": "Autoformation continue à travers des projets personnels, avec un approfondissement des compétences précédemment acquises et l'apprentissage de nouvelles technologies.",
+    "icon": "/icons/profile-icon.png"
+  },
+  {
+    "organisation": "Le Wagon",
+    "title": "Développement Web",
+    "year": "2022",
+    "description": "Formation intensive en développement web couvrant les bases du HTML, CSS, JavaScript, SQL, et Ruby on Rails. Acquisition de compétences en design avec Figma et expérience du travail en équipe.",
+    "icon": "/icons/lewagon.png"
+  }
+]
