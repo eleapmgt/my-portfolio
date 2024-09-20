@@ -1,7 +1,5 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import ChevronLeftIcon from './ChevronLeftIcon';
-import ChevronRightIcon from './ChevronRightIcon';
 import CoursesData from '/src/data/courses.json';
 
 const EducationCard = () => {
