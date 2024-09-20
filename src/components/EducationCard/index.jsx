@@ -1,9 +1,10 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import CoursesData from '/src/data/courses.json';
 
 const EducationCard = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isFirstRender, setIsFirstRender] = useState(true);
   const courses = CoursesData;
 
   const nextCourse = () => {
@@ -16,6 +17,10 @@ const EducationCard = () => {
     );
   };
 
+  useEffect(() => {
+    setIsFirstRender(false);
+  });
+
   return (
     <section className="section-education col-span-4 row-span-4 flex flex-col items-center justify-between p-10 custom-card space-y-1 relative">
       <h2 className="text-xl uppercase font-semibold">Formations</h2>
@@ -25,7 +30,7 @@ const EducationCard = () => {
             <motion.div
               className="flex flex-col space-y-2 items-center"
               key={currentIndex}
-              initial={{ opacity: 0, x: 40 }}
+              initial={isFirstRender ? {} : { opacity: 0, x: 40 }}
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -40 }}
               transition={{ duration: 0.4 }}
@@ -55,7 +60,7 @@ const EducationCard = () => {
             className="h-40
           overflow-y-auto"
             key={currentIndex}
-            initial={{ opacity: 0, x: 40 }}
+            initial={isFirstRender ? {} : { opacity: 0, x: 40 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -40 }}
             transition={{ duration: 0.4 }}
