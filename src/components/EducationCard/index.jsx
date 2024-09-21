@@ -19,7 +19,7 @@ const EducationCard = () => {
 
   useEffect(() => {
     setIsFirstRender(false);
-  });
+  }, []);
 
   return (
     <section className="section-education col-span-4 row-span-4 flex flex-col items-center justify-between p-10 custom-card space-y-1 relative">
