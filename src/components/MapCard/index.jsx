@@ -6,7 +6,7 @@ const MapCard = () => {
     <>
       <div className="col-span-1 row-span-1 custom-card overflow-hidden relative">
         <img
-          src="/assets/images/bordeaux-map.png"
+          src="/assets/images/profile-grid/bordeaux-map.png"
           alt="Bordeaux's map"
           className="w-full h-full object-cover"
         />
