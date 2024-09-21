@@ -1,0 +1,67 @@
+[
+  {
+    "skillName": "Git",
+    "description": "Icône de Git",
+    "icon": "/icons/skills/git.png"
+  },
+  {
+    "skillName": "HTML",
+    "description": "Icône de HTML",
+    "icon": "/icons/skills/html.png"
+  },
+  {
+    "skillName": "CSS",
+    "description": "Icône de CSS",
+    "icon": "/icons/skills/css.png"
+  },
+  {
+    "skillName": "Sass",
+    "description": "Icône de Sass",
+    "icon": "/icons/skills/sass.png"
+  },
+  {
+    "skillName": "Tailwind",
+    "description": "Icône de Tailwind",
+    "icon": "/icons/skills/tailwind.png"
+  },
+  {
+    "skillName": "JavaScript",
+    "description": "Icône de JavaScript",
+    "icon": "/icons/skills/javascript.png"
+  },
+  {
+    "skillName": "React",
+    "description": "Icône de React",
+    "icon": "/icons/skills/react.png"
+  },
+  {
+    "skillName": "Node.js",
+    "description": "Icône de Node.js",
+    "icon": "/icons/skills/nodejs.png"
+  },
+  {
+    "skillName": "MongoDB",
+    "description": "Icône de MongoDB",
+    "icon": "/icons/skills/mongodb.png"
+  },
+  {
+    "skillName": "Express",
+    "description": "Icône d'Express",
+    "icon": "/icons/skills/express.png"
+  },
+  {
+    "skillName": "Vite",
+    "description": "Icône de Vite",
+    "icon": "/icons/skills/vitejs.png"
+  },
+  {
+    "skillName": "Canva",
+    "description": "Icône de Canva",
+    "icon": "/icons/skills/canva.png"
+  },
+  {
+    "skillName": "Figma",
+    "description": "Icône de Figma",
+    "icon": "/icons/skills/figma.png"
+  }
+]
