@@ -1,9 +1,6 @@
 import { motion } from 'framer-motion';
-import { useState } from 'react';
 
-const MoonIcon = () => {
-  const [isHovered, setIsHovered] = useState(false);
-
+const MoonIcon = ({ isHovered }) => {
   return (
     <motion.svg
       xmlns="http://www.w3.org/2000/svg"
@@ -29,8 +26,6 @@ const MoonIcon = () => {
         },
       }}
       style={{ originX: 0.5, originY: 0.5 }}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
     >
       <path
         strokeLinecap="round"

@@ -1,9 +1,8 @@
 import { motion, useAnimation } from 'framer-motion';
-import { useState, useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 
-const SunIcon = () => {
+const SunIcon = ({ isHovered }) => {
   const controls = useAnimation();
-  const [isHovered, setIsHovered] = useState(false);
   const rotationRef = useRef(0);
   const lastTimeRef = useRef(0);
 
@@ -39,8 +38,6 @@ const SunIcon = () => {
       title="Icône d'un soleil représentant le Light Mode"
       className="size-12"
       animate={controls}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
       style={{ originX: 0.5, originY: 0.5 }}
     >
       <path
