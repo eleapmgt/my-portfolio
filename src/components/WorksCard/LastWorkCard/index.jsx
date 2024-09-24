@@ -34,7 +34,7 @@ const LastWorkCard = () => {
     <div className="w-full h-full col-span-9 row-span-3 custom-card flex flex-row items-center justify-between">
       <div className="w-7/12 flex flex-col items-start justify-center p-20 space-y-3 text-justify">
         <div className="space-y-1">
-          <h2 className="font-semibold text-2xl uppercase">Kasa Website</h2>
+          <h2 className="font-semibold text-2xl">Kasa Website</h2>
           <p className="text-base text-gray-700">
             Plateforme de location immobilière
           </p>
@@ -58,7 +58,7 @@ const LastWorkCard = () => {
           ))}
         </div>
         <a
-          href="https://github.com/eleapmgt"
+          href="https://github.com/eleapmgt/kasa-website"
           target="_blank"
           className="inline-flex items-end text-gray-700 hover:text-gray-900 transition-colors gap-2 pt-2"
         >
