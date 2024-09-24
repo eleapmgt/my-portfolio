@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
-import GithubIcon from '../GithubIcon';
+import SkillsSpans from '../shared/SkillsSpans';
 import VideoKasa from '/assets/videos/works-grid/kasa-video.mp4';
+import GithubLink from '../shared/GithubLink';
 
 const LastWorkCard = () => {
   const skills = ['React', 'React Router', 'JavaScript', 'Sass', 'Responsive'];
@@ -31,7 +32,7 @@ const LastWorkCard = () => {
   };
 
   return (
-    <div className="w-full h-full col-span-9 row-span-3 custom-card flex flex-row items-center justify-between">
+    <div className="w-full h-full col-span-9 row-span-3 custom-card flex flex-row items-center justify-between overflow-hidden">
       <div className="w-7/12 flex flex-col items-start justify-center p-20 space-y-3 text-justify">
         <div className="space-y-1">
           <h2 className="font-semibold text-2xl">Kasa Website</h2>
@@ -47,28 +48,12 @@ const LastWorkCard = () => {
           du routage, la création de composants réutilisables, l&apos;animation
           des menus déroulants et la galerie d&apos;images interactive.
         </p>
-        <div className="flex flex-wrap gap-3">
-          {skills.map((skill, index) => (
-            <span
-              key={index}
-              className="px-3 py-1 bg-white text-gray-700 text-sm font-medium rounded-full shadow-sm"
-            >
-              {skill}
-            </span>
-          ))}
-        </div>
-        <a
-          href="https://github.com/eleapmgt/kasa-website"
-          target="_blank"
-          className="inline-flex items-end text-gray-700 hover:text-gray-900 transition-colors gap-2 pt-2"
-        >
-          <GithubIcon />
-          <span className="text-base relative top-1">Voir sur GitHub</span>
-        </a>
+        <SkillsSpans skills={skills} />
+        <GithubLink githubLink="https://github.com/eleapmgt/kasa-website" />
       </div>
-      <div className="h-full flex flex-1 items-center justify-center p-5">
+      <div className="h-full flex flex-1 items-center justify-center">
         <div
-          className="bg-white h-full w-full rounded-2xl shadow-sm flex items-center justify-center"
+          className="bg-white h-full w-full shadow-sm flex items-center justify-center"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={handleMouseLeave}
         >

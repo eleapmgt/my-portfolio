@@ -1,5 +1,5 @@
 import LastWorkCard from '../../WorksCard/LastWorkCard';
-import HorizontalWorkCard from '../../WorksCard/HorizontalWorkCard';
+import WorkCard from '../../WorksCard/WorkCard';
 
 const WorkGrid = () => {
   return (
@@ -8,8 +8,17 @@ const WorkGrid = () => {
       className="grid w-full grid-cols-9 grid-rows-[repeat(9,_7rem)] gap-5"
     >
       <LastWorkCard />
-      <div className="w-full h-full col-span-3 row-span-6 custom-card"></div>
-      <HorizontalWorkCard
+      <WorkCard
+        title="Mon Vieux Grimoire"
+        description="Site de référencement et de notation de livres"
+        details="Développement du back-end avec Express et MongoDB, en veillant à la sécurisation des opérations CRUD et à la gestion des authentifications et fichiers utilisateurs, avec une architecture MVC."
+        skills={['Node.js', 'Express', 'MongoDB', 'Mongoose', 'JWT']}
+        githubLink="https://github.com/eleapmgt/Mon-Vieux-Grimoire-website"
+        imageSrc="/assets/images/works-grid/mvg-preview.png"
+        customImageStyle="h-full object-cover"
+      />
+      <WorkCard
+        isVertical={false}
         title="Sophie Bluel Website"
         description="Portfolio architecte d'intérieur"
         details="Réalisation d'une page web dynamique avec une galerie de projets filtrable, une page de connexion et une interface d'administration. Les projets sont gérés via une API et une modale, avec un formulaire pour la collecte des données, tout en respectant les maquettes Figma."
@@ -18,10 +27,11 @@ const WorkGrid = () => {
         imageSrc="/assets/images/works-grid/sophie-bluel-preview.png"
         customImageStyle="h-full object-cover object-[70%]"
       />
-      <HorizontalWorkCard
+      <WorkCard
+        isVertical={false}
         title="Booki Website"
         description="Page d'accueil d'une agence de voyage"
-        details="Développement d'une interface responsive basée sur les maquettes Figma fournies pour desktop, tablette et mobile. Le projet se concentre sur l'intégration HTML/CSS avec un formulaire de recherche et l'optimisation du positionnement des éléments à l'aide de Flexbox."
+        details="Création d'une interface responsive basée sur les maquettes Figma fournies pour desktop, tablette et mobile. Le projet se concentre sur l'intégration HTML/CSS avec un formulaire de recherche et l'optimisation du positionnement des éléments à l'aide de Flexbox."
         skills={['HTML', 'CSS', 'Responsive', 'Figma']}
         githubLink="https://github.com/eleapmgt/booki-website"
         imageSrc="/assets/images/works-grid/booki-preview.png"
