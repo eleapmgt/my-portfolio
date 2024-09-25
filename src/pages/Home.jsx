@@ -1,5 +1,6 @@
 import ProfileGrid from '../components/MainGrid/ProfileGrid';
 import WorksGrid from '../components/MainGrid/WorksGrid';
+import Footer from '../components/Footer';
 
 function Home() {
   return (
@@ -9,6 +10,7 @@ function Home() {
     >
       <ProfileGrid />
       <WorksGrid />
+      <Footer />
     </div>
   );
 }
