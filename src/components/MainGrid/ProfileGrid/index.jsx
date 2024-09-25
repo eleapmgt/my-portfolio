@@ -6,6 +6,7 @@ import TogglerCard from '../../TogglerCard';
 import EducationCard from '../../EducationCard';
 import SkillsCard from '../../SkillsCard';
 import SummaryLastProjectCard from '../../SummaryLastProjectCard';
+import ContactFormModal from '../../ContactFormModal';
 
 const ProfileGrid = () => {
   return (
@@ -16,10 +17,7 @@ const ProfileGrid = () => {
       <ProfileCard />
       <div className="col-span-2 row-span-3 grid h-full w-full grid-cols-1 grid-rows-2 gap-5">
         <MapCard />
-        <IconCard
-          iconSrc="/icons/mail-black.png"
-          description="Icône de contact par mail"
-        />
+        <ContactFormModal />
       </div>
       <div className="col-span-4 row-span-3 grid h-full w-full grid-cols-1 grid-rows-2 gap-5">
         <CurriculumCard />
@@ -29,12 +27,12 @@ const ProfileGrid = () => {
       <EducationCard />
       <div className="col-span-2 row-span-3 grid h-full w-full grid-cols-1 grid-rows-2 gap-5">
         <IconCard
-          colSpan="col-span-2"
+          iconRef="https://github.com/eleapmgt"
           iconSrc="/icons/github-black.png"
           description="Icône de Github"
         />
         <IconCard
-          colSpan="col-span-2"
+          iconRef="https://www.linkedin.com/in/elea-pimouguet/"
           iconSrc="/icons/linkedin-black.png"
           description="Icône de Linkedin"
         />

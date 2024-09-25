@@ -6,6 +6,8 @@ const GithubLink = ({ githubLink }) => {
     <motion.a
       href={githubLink}
       target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Lien vers le compte GitHub"
       className="inline-flex items-end text-gray-700 hover:text-gray-900 transition-colors gap-2 pt-2"
       style={{
         transformStyle: 'preserve-3d',

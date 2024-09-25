@@ -1,14 +1,13 @@
 import { motion } from 'framer-motion';
 
-const IconCard = ({
-  iconSrc,
-  description,
-  colSpan = 'col-span-1',
-  rowSpan = 'row-span-1',
-}) => {
+const IconCard = ({ iconSrc, description, iconRef }) => {
   return (
-    <motion.div
-      className={`${colSpan} ${rowSpan} flex justify-center items-center custom-card`}
+    <motion.a
+      href={iconRef}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={description}
+      className="col-span-2 row-span-1 flex justify-center items-center custom-card"
       animate="initial"
       whileHover="hover"
     >
@@ -32,7 +31,7 @@ const IconCard = ({
           },
         }}
       />
-    </motion.div>
+    </motion.a>
   );
 };
 
