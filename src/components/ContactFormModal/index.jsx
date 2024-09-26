@@ -153,8 +153,8 @@ const ContactFormModal = () => {
               )}
               {state.errors && (
                 <div role="alert" className="text-red-500 text-sm mt-2">
-                  Une erreur s'est produite. Veuillez vérifier vos informations
-                  et réessayer.
+                  Une erreur s&apos;est produite. Veuillez vérifier vos
+                  informations et réessayer.
                 </div>
               )}
             </motion.div>
