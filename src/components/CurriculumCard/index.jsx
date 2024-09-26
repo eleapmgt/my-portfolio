@@ -10,19 +10,20 @@ const CurriculumCard = () => {
 
   return (
     <div className="col-span-1 row-span-1 flex items-center justify-between custom-card">
-      <div className="flex flex-col pl-9">
+      <div className="flex flex-col pl-12">
         <h3 className="font-bold uppercase text-lg">Curriculum Vitae</h3>
         <span>2024</span>
       </div>
-      <div className="flex flex-row items-center gap-4 pr-9">
-        <motion.div
+      <div className="flex flex-row items-center gap-4 pr-12">
+        <motion.a
+          href="/assets/docs/cv-eleapimouguet.pdf"
+          download="EléaPimouguet_CV.pdf"
           onMouseEnter={() => setIsPlaying(true)}
           onMouseLeave={() => setIsPlaying(false)}
           initial={{ scale: 1 }}
           animate={isPlaying ? { scale: 1.1 } : { scale: 1 }}
           transition={{ duration: 0.3 }}
-          role="img"
-          aria-label="Animation de téléchargement du CV"
+          aria-label="Télécharger le CV"
         >
           <Lottie
             loop
@@ -32,7 +33,7 @@ const CurriculumCard = () => {
             style={{ height: '60px', width: '60px' }}
             goTo={0}
           />
-        </motion.div>
+        </motion.a>
         <motion.div
           onMouseEnter={() => setIsBlinking(true)}
           onMouseLeave={() => setIsBlinking(false)}
