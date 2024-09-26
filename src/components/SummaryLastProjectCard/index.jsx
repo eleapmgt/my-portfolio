@@ -1,14 +1,27 @@
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import ArrowUpRight from './RightArrow';
 
 const SummaryLastProjectCard = () => {
   const [isHovered, setIsHovered] = useState(false);
+  const handleClick = useCallback(() => {
+    const worksSection = document.getElementById('works-grid');
+    if (worksSection) {
+      const yOffset = -10;
+      const y =
+        worksSection.getBoundingClientRect().top + window.scrollY + yOffset;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
+  }, []);
+
   return (
     <motion.div
       className="col-span-5 row-span-3 flex justify-center custom-card relative overflow-hidden"
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
+      onClick={handleClick}
+      whileHover={{ scale: 1.02 }}
+      whileTap={{ scale: 0.98 }}
     >
       <motion.img
         src="/assets/images/profile-grid/kasa-website.png"

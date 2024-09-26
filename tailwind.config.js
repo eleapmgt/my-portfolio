@@ -10,6 +10,10 @@ export default {
         'custom-text': '#313132',
       },
     },
+    screens: {
+      desktop: '1240px',
+      tablet: '768px',
+    },
   },
   plugins: [],
 };

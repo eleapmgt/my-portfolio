@@ -12,7 +12,7 @@ const ProfileGrid = () => {
   return (
     <section
       id="profile-grid"
-      className="grid w-full grid-cols-11 grid-rows-[repeat(7,_6.7rem)] gap-5"
+      className="flex flex-col m-3 gap-3 tablet:grid tablet:w-full tablet:grid-cols-11 tablet:grid-rows-[repeat(7,_6.7rem)] tablet:gap-5"
     >
       <ProfileCard />
       <div className="col-span-2 row-span-3 grid h-full w-full grid-cols-1 grid-rows-2 gap-5">
