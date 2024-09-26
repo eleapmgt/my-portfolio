@@ -57,21 +57,23 @@ const PDFViewerModal = ({ isOpen, onClose, pdfUrl }) => {
             }}
             exit={{ scale: 0.8, opacity: 0 }}
             transition={{ type: 'spring', stiffness: 260, damping: 15 }}
-            className="bg-white p-4 rounded-3xl shadow-xl max-w-3xl w-full z-50 relative"
+            className="bg-white rounded-3xl shadow-xl max-w-4xl w-full max-h-[80vh] z-50 relative flex flex-col overflow-hidden"
           >
             <CloseIcon onClick={onClose} />
-            <div className="flex justify-center">
-              <Document
-                file={pdfUrl}
-                onLoadSuccess={onDocumentLoadSuccess}
-                className="flex justify-center"
-              >
-                <Page pageNumber={1} />
-              </Document>
+            <div className="flex-grow overflow-auto custom-scrollbar">
+              <div className="w-full">
+                <Document
+                  file={pdfUrl}
+                  onLoadSuccess={onDocumentLoadSuccess}
+                  className="flex justify-center"
+                >
+                  <Page pageNumber={1} scale="1.3" />
+                </Document>
+              </div>
+              {!pageLoaded && (
+                <div className="text-center mt-4">Chargement du PDF...</div>
+              )}
             </div>
-            {!pageLoaded && (
-              <div className="text-center mt-4">Chargement du PDF...</div>
-            )}
           </motion.div>
         </motion.div>
       )}
