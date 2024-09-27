@@ -15,7 +15,7 @@ const WorkGrid = () => {
         skills={['Node.js', 'Express', 'MongoDB', 'Mongoose', 'JWT']}
         githubLink="https://github.com/eleapmgt/Mon-Vieux-Grimoire-website"
         imageSrc="/assets/images/works-grid/mvg-preview.png"
-        customImageStyle="h-full object-cover"
+        customImageStyle="tablet:h-full w-[calc(100vw-24px)] h-auto object-cover transform tablet:translate-y-0 translate-y-[-20px]"
       />
       <WorkCard
         isVertical={false}
@@ -25,7 +25,7 @@ const WorkGrid = () => {
         skills={['JavaScript', 'HTML/CSS', 'API', 'Figma']}
         githubLink="https://github.com/eleapmgt/Portfolio-architecte-sophie-bluel"
         imageSrc="/assets/images/works-grid/sophie-bluel-preview.png"
-        customImageStyle="h-full object-cover object-[70%]"
+        customImageStyle="h-full w-[calc(100vw-24px)] object-cover tablet:object-[70%]"
       />
       <WorkCard
         isVertical={false}
@@ -35,7 +35,7 @@ const WorkGrid = () => {
         skills={['HTML', 'CSS', 'Responsive', 'Figma']}
         githubLink="https://github.com/eleapmgt/booki-website"
         imageSrc="/assets/images/works-grid/booki-preview.png"
-        customImageStyle="object-cover h-full pl-5"
+        customImageStyle="object-cover w-[calc(100vw-24px)] h-full tablet:pl-5"
       />
     </section>
   );

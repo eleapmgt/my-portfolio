@@ -8,7 +8,7 @@ const GithubLink = ({ githubLink }) => {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Lien vers le compte GitHub"
-      className="inline-flex min-w-full items-end justify-center gap-2 rounded-2xl bg-black pb-6 pt-4 text-white transition-colors hover:text-gray-900 tablet:min-w-0 tablet:justify-normal tablet:bg-transparent tablet:px-0 tablet:pb-0 tablet:pt-2 tablet:text-[#313132]"
+      className="inline-flex min-w-full items-end justify-center gap-2 rounded-2xl bg-black pb-6 pt-4 text-white tablet:min-w-0 tablet:justify-normal tablet:bg-transparent tablet:px-0 tablet:pb-0 tablet:pt-2 tablet:text-[#313132]"
       style={{
         transformStyle: 'preserve-3d',
         transform: 'translateZ(0)',

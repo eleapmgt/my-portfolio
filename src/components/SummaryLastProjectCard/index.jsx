@@ -20,19 +20,17 @@ const SummaryLastProjectCard = () => {
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
       onClick={handleClick}
-      whileHover={{ scale: 1.02 }}
-      whileTap={{ scale: 0.98 }}
     >
       <motion.img
         src="/assets/images/profile-grid/kasa-website.png"
         alt="Image du dernier projet réalisé"
         className="h-full"
-        initial={{ scale: 1.2 }}
-        animate={{ scale: isHovered ? 1.3 : 1.2 }}
+        initial={{ scale: 1 }}
+        animate={{ scale: isHovered ? 1.2 : 1 }}
         transition={{ duration: 0.4 }}
       />
       <motion.div
-        className="absolute inset-0 bg-gradient-to-t from-white via-white/80 to-transparent opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100"
+        className="absolute inset-0 bg-gradient-to-t from-white via-white/80 to-transparent opacity-0 transition-opacity duration-300 ease-in-out"
         initial={{ opacity: 0 }}
         animate={{ opacity: isHovered ? 1 : 0 }}
         transition={{ duration: 0.3 }}

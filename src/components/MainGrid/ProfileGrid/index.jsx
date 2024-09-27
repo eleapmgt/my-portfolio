@@ -13,7 +13,7 @@ const ProfileGrid = () => {
   return (
     <section
       id="profile-grid"
-      className="m-3 flex flex-col gap-3 tablet:m-0 tablet:grid tablet:w-full tablet:grid-cols-11 tablet:grid-rows-[repeat(7,_6.7rem)] tablet:gap-5"
+      className="mx-3 flex flex-col gap-3 tablet:m-0 tablet:grid tablet:w-full tablet:grid-cols-11 tablet:grid-rows-[repeat(7,_6.7rem)] tablet:gap-5"
     >
       <ProfileCard />
       <ProfileGridMobile />

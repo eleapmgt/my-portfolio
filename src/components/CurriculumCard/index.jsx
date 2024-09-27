@@ -3,14 +3,14 @@ import { motion } from 'framer-motion';
 import Lottie from 'react-lottie-player';
 import downloadAnimation from '/src/animations/download-animation.json';
 import blinkingAnimation from '/src/animations/blinking-eye-animation.json';
-import PDFViewerModal from './PDFViewerModal/index.jsx';
 
 const CurriculumCard = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isBlinking, setIsBlinking] = useState(false);
-  const [isPDFModalOpen, setIsPDFModalOpen] = useState(false);
 
-  const togglePDFModal = () => setIsPDFModalOpen(!isPDFModalOpen);
+  const openPDFInNewTab = () => {
+    window.open('/assets/docs/cv-eleapimouguet.pdf', '_blank');
+  };
 
   return (
     <>
@@ -47,7 +47,7 @@ const CurriculumCard = () => {
             transition={{ duration: 0.3 }}
             role="button"
             aria-label="Visualiser le CV"
-            onClick={togglePDFModal}
+            onClick={openPDFInNewTab}
             className="cursor-pointer"
           >
             <Lottie
@@ -61,11 +61,6 @@ const CurriculumCard = () => {
           </motion.div>
         </div>
       </div>
-      <PDFViewerModal
-        isOpen={isPDFModalOpen}
-        onClose={togglePDFModal}
-        pdfUrl="/assets/docs/cv-eleapimouguet.pdf"
-      />
     </>
   );
 };

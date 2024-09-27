@@ -2,10 +2,10 @@ const Footer = () => {
   return (
     <section
       id="footer"
-      className="h-[120px] w-full flex flex-col justify-center items-center custom-card"
+      className="custom-card mx-3 flex h-[120px] flex-col items-center justify-center tablet:mx-0 tablet:w-full"
     >
-      <span className="text-base font-thin">
-        © 2024 Eléa Pimouguet. All rights reserved.
+      <span className="flex items-center p-4 text-center text-base font-thin tablet:p-0">
+        © 2024 Eléa Pimouguet
       </span>
     </section>
   );
