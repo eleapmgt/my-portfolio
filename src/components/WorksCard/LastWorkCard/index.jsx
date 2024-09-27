@@ -32,34 +32,37 @@ const LastWorkCard = () => {
   };
 
   return (
-    <div className="w-full h-full col-span-9 row-span-3 custom-card flex flex-row items-center justify-between overflow-hidden">
-      <div className="w-7/12 flex flex-col items-start justify-center p-20 space-y-3 text-justify">
+    <div className="custom-card flex h-[calc(100dvh-24px)] w-full flex-col-reverse items-center overflow-hidden tablet:col-span-9 tablet:row-span-3 tablet:h-full tablet:flex-row">
+      <div
+        id="card-text"
+        className="flex h-3/5 w-full flex-col items-start justify-between space-y-3 p-6 text-justify min-[600px]:p-10 tablet:w-7/12 tablet:justify-center tablet:p-20"
+      >
         <div className="space-y-1">
-          <h2 className="font-semibold text-2xl">Kasa Website</h2>
-          <p className="text-base text-gray-700">
+          <h2 className="text-2xl font-semibold">Kasa Website</h2>
+          <p className="text-lg text-gray-700 tablet:text-base">
             Plateforme de location immobilière
           </p>
         </div>
-        <p className="text-sm text-gray-600 leading-relaxed pb-3">
+        <div className="line-clamp-6 text-base leading-relaxed text-gray-600 min-[450px]:line-clamp-none tablet:pb-3 tablet:text-sm">
           Le projet consistait à développer le front-end de l&apos;application
           avec React et React Router pour optimiser l&apos;expérience
           utilisateur et la navigation. L&apos;interface responsive a été
           réalisée à partir de maquettes Figma. Les défis incluaient la gestion
           du routage, la création de composants réutilisables, l&apos;animation
           des menus déroulants et la galerie d&apos;images interactive.
-        </p>
+        </div>
         <SkillsSpans skills={skills} />
         <GithubLink githubLink="https://github.com/eleapmgt/kasa-website" />
       </div>
-      <div className="h-full flex flex-1 items-center justify-center">
+      <div className="flex h-2/5 w-full items-center justify-center tablet:h-full tablet:flex-1">
         <div
-          className="bg-white h-full w-full shadow-sm flex items-center justify-center"
+          className="flex h-full w-full items-center justify-center bg-white shadow-sm"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={handleMouseLeave}
         >
           <video
             ref={videoRef}
-            className="w-auto h-auto p-12"
+            className="h-full w-auto p-6 tablet:h-auto tablet:p-12"
             loop={false}
             muted
             playsInline

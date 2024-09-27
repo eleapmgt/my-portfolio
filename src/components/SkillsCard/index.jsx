@@ -3,12 +3,15 @@ import SkillsArray from '/src/data/skills.json';
 
 const SkillsCard = () => {
   return (
-    <section className="section-skills col-span-7 row-span-1 custom-card relative overflow-hidden">
-      <div className="absolute inset-y-0 left-0 w-[70px] bg-gradient-to-r from-gray-50 via-gray-50 to-transparent z-10"></div>
-      <div className="absolute inset-y-0 right-0 w-[70px] bg-gradient-to-l from-gray-50 via-gray-50 to-transparent z-10"></div>
-      <div className="relative h-full flex items-center ">
+    <section
+      id="section-skills"
+      className="custom-card relative h-[calc((100vh-60px)/5)] overflow-hidden tablet:col-span-7 tablet:row-span-1 tablet:h-full"
+    >
+      <div className="absolute inset-y-0 left-0 z-10 w-[70px] bg-gradient-to-r from-gray-50 via-gray-50 to-transparent"></div>
+      <div className="absolute inset-y-0 right-0 z-10 w-[70px] bg-gradient-to-l from-gray-50 via-gray-50 to-transparent"></div>
+      <div className="relative flex h-full items-center">
         <motion.div
-          className="flex space-x-4 absolute"
+          className="absolute flex space-x-4"
           animate={{ x: ['0%', '-50%'] }}
           transition={{
             x: {
@@ -22,12 +25,12 @@ const SkillsCard = () => {
           {[...SkillsArray, ...SkillsArray].map((skill, index) => (
             <div
               key={index}
-              className="flex flex-col items-center justify-center w-24"
+              className="flex w-24 flex-col items-center justify-center"
             >
               <img
                 src={skill.icon}
                 alt={skill.description}
-                className="w-11 h-11 rounded-xl mb-1 object-contain"
+                className="mb-1 h-11 w-11 rounded-xl object-contain"
                 loading="lazy"
                 decoding="async"
               />

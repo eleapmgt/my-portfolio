@@ -7,14 +7,14 @@ const IconCard = ({ iconSrc, description, iconRef }) => {
       target="_blank"
       rel="noopener noreferrer"
       aria-label={description}
-      className="col-span-2 row-span-1 flex justify-center items-center custom-card"
+      className="custom-card flex items-center justify-center tablet:col-span-2 tablet:row-span-1"
       animate="initial"
       whileHover="hover"
     >
       <motion.img
         src={iconSrc}
         alt={description}
-        className="w-16 h-16"
+        className="h-16 w-16"
         variants={{
           initial: {
             rotate: 0,

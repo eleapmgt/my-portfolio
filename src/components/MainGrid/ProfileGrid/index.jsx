@@ -7,25 +7,33 @@ import EducationCard from '../../EducationCard';
 import SkillsCard from '../../SkillsCard';
 import SummaryLastProjectCard from '../../SummaryLastProjectCard';
 import ContactFormModal from '../../ContactFormModal';
+import ProfileGridMobile from './ProfileGridMobile';
 
 const ProfileGrid = () => {
   return (
     <section
       id="profile-grid"
-      className="flex flex-col m-3 gap-3 tablet:grid tablet:w-full tablet:grid-cols-11 tablet:grid-rows-[repeat(7,_6.7rem)] tablet:gap-5"
+      className="m-3 flex flex-col gap-3 tablet:m-0 tablet:grid tablet:w-full tablet:grid-cols-11 tablet:grid-rows-[repeat(7,_6.7rem)] tablet:gap-5"
     >
       <ProfileCard />
-      <div className="col-span-2 row-span-3 grid h-full w-full grid-cols-1 grid-rows-2 gap-5">
+      <ProfileGridMobile />
+      <div
+        id="map-contact-wrapper"
+        className="hidden justify-center tablet:col-span-2 tablet:row-span-3 tablet:grid tablet:h-full tablet:w-full tablet:grid-cols-1 tablet:grid-rows-2 tablet:justify-normal tablet:gap-5"
+      >
         <MapCard />
         <ContactFormModal />
       </div>
-      <div className="col-span-4 row-span-3 grid h-full w-full grid-cols-1 grid-rows-2 gap-5">
+      <div
+        id="cv-toggler-wrapper"
+        className="hidden tablet:col-span-4 tablet:row-span-3 tablet:grid tablet:h-full tablet:w-full tablet:grid-cols-1 tablet:grid-rows-2 tablet:gap-5"
+      >
         <CurriculumCard />
         <TogglerCard />
       </div>
       <SkillsCard />
       <EducationCard />
-      <div className="col-span-2 row-span-3 grid h-full w-full grid-cols-1 grid-rows-2 gap-5">
+      <div className="tablet-auto hidden tablet:col-span-2 tablet:row-span-3 tablet:grid tablet:h-full tablet:w-full tablet:grid-cols-1 tablet:grid-rows-2 tablet:gap-5">
         <IconCard
           iconRef="https://github.com/eleapmgt"
           iconSrc="/icons/github-black.png"

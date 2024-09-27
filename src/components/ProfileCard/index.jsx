@@ -5,7 +5,7 @@ const ProfileCard = () => {
         <img
           src="./icons/profile-icon.png"
           alt="Avatar"
-          className="mb-3 h-20 w-20 rounded-full border-4 border-white shadow-md tablet:h-32 tablet:w-32"
+          className="mb-2 h-20 w-20 rounded-full border-4 border-white shadow-md tablet:h-32 tablet:w-32"
         />
         <h1 className="text-3xl font-semibold uppercase tablet:pt-2 tablet:text-4xl">
           Elea Pimouguet
@@ -18,7 +18,7 @@ const ProfileCard = () => {
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-lime-500 opacity-75"></span>
             <span className="relative inline-flex h-3 w-3 rounded-full bg-lime-500"></span>
           </span>
-          <span>Available for work</span>
+          <span className="text-base">Available for work</span>
         </div>
       </div>
     </div>

@@ -4,20 +4,20 @@ import pinAnimation from '/src/animations/pin-animation.json';
 const MapCard = () => {
   return (
     <>
-      <div className="col-span-1 row-span-1 custom-card overflow-hidden relative">
+      <div className="tablet:custom-card hidden tablet:relative tablet:col-span-1 tablet:row-span-1 tablet:flex tablet:overflow-hidden">
         <img
           src="/assets/images/profile-grid/bordeaux-map.png"
           alt="Bordeaux's map"
-          className="w-full h-full object-cover"
+          className="h-full w-full object-cover"
         />
-        <div className="bg-white bg-fixed absolute bottom-0 w-full h-[3.1rem] flex items-center pl-[1rem]">
+        <div className="absolute bottom-0 flex h-[3.1rem] w-full items-center bg-white bg-fixed pl-[1rem]">
           <Lottie
             loop
             animationData={pinAnimation}
             play
             style={{ height: '24px', width: '24px' }}
           />
-          <span className="uppercase font-semibold pl-1.5 pt-1">Bordeaux</span>
+          <span className="pl-1.5 pt-1 font-semibold uppercase">Bordeaux</span>
         </div>
       </div>
     </>

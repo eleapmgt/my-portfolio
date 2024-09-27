@@ -12,12 +12,11 @@ const skillVariants = {
 
 const SkillsSpans = ({ skills = [] }) => {
   return (
-    <div className="flex flex-wrap gap-3">
-      {' '}
+    <div className="flex flex-wrap justify-center gap-3 tablet:justify-normal">
       {skills.map((skill, index) => (
         <motion.span
           key={index}
-          className="px-3 py-1 bg-white text-gray-700 text-sm font-medium rounded-full shadow-sm"
+          className="rounded-full bg-white px-3 py-1 text-sm font-medium text-gray-700 shadow-sm"
           variants={skillVariants}
           style={{
             transformStyle: 'preserve-3d',

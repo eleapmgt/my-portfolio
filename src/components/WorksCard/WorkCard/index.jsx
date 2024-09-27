@@ -14,16 +14,16 @@ const WorkCard = ({
 }) => {
   return (
     <div
-      className={`max-w-full max-h-full ${isVertical ? 'row-span-6 col-span-3 flex-col-reverse' : 'row-span-3 col-span-6 flex-row'} custom-card flex items-center overflow-hidden`}
+      className={`max-h-full max-w-full ${isVertical ? 'col-span-3 row-span-6 flex-col-reverse' : 'col-span-6 row-span-3 flex-row'} custom-card flex items-center overflow-hidden`}
     >
       <div
-        className={`${isVertical ? 'w-[80%] pl-0 pb-12 h-1/2' : 'w-7/12 pl-12'} flex flex-col items-start justify-center space-y-3`}
+        className={`${isVertical ? 'h-1/2 w-[80%] pb-12 pl-0' : 'w-7/12 pl-12'} flex flex-col items-start justify-center space-y-3`}
       >
         <div className="space-y-1">
-          <h2 className="font-semibold text-2xl">{title}</h2>
+          <h2 className="text-2xl font-semibold">{title}</h2>
           <p className="text-base text-gray-700">{description}</p>
         </div>
-        <p className="text-sm text-gray-600 leading-relaxed pb-3 text-justify">
+        <p className="pb-3 text-justify text-sm leading-relaxed text-gray-600">
           {details}
         </p>
         <SkillsSpans skills={skills} />

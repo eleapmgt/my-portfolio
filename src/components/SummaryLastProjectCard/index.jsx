@@ -16,7 +16,7 @@ const SummaryLastProjectCard = () => {
 
   return (
     <motion.div
-      className="col-span-5 row-span-3 flex justify-center custom-card relative overflow-hidden"
+      className="tablet:auto tablet:custom-card hidden tablet:relative tablet:col-span-5 tablet:row-span-3 tablet:flex tablet:justify-center tablet:overflow-hidden"
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
       onClick={handleClick}
@@ -32,7 +32,7 @@ const SummaryLastProjectCard = () => {
         transition={{ duration: 0.4 }}
       />
       <motion.div
-        className="absolute inset-0 bg-gradient-to-t from-white via-white/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out"
+        className="absolute inset-0 bg-gradient-to-t from-white via-white/80 to-transparent opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100"
         initial={{ opacity: 0 }}
         animate={{ opacity: isHovered ? 1 : 0 }}
         transition={{ duration: 0.3 }}
@@ -43,7 +43,7 @@ const SummaryLastProjectCard = () => {
         animate={{ y: isHovered ? 0 : 20, opacity: isHovered ? 1 : 0 }}
         transition={{ duration: 0.3, delay: 0.1 }}
       >
-        <h3 className="font-semibold text-2xl">Kasa Website</h3>
+        <h3 className="text-2xl font-semibold">Kasa Website</h3>
         <div className="flex flex-row items-center space-x-2">
           <p className="text-base">Découvrir mon dernier projet</p>
           <ArrowUpRight />

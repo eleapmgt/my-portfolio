@@ -22,13 +22,18 @@ const EducationCard = () => {
   }, []);
 
   return (
-    <section className="section-education col-span-4 row-span-4 flex flex-col items-center justify-between p-10 custom-card space-y-1 relative">
-      <h2 className="text-xl uppercase font-semibold">Formations</h2>
-      <div className="course-container flex flex-col w-full relative">
-        <div className="flex items-center justify-center h-32 pb-4">
+    <section
+      id="section-education"
+      className="custom-card relative flex flex-col items-center justify-between space-y-4 p-10 tablet:col-span-4 tablet:row-span-4 tablet:space-y-0"
+    >
+      <h2 className="py-4 text-xl font-semibold uppercase tablet:py-2">
+        Formations
+      </h2>
+      <div className="course-container relative flex w-full flex-col">
+        <div className="flex h-32 items-center justify-center pb-4 tablet:pb-10">
           <AnimatePresence mode="wait">
             <motion.div
-              className="flex flex-col space-y-2 items-center"
+              className="flex flex-col items-center space-y-6"
               key={currentIndex}
               initial={isFirstRender ? {} : { opacity: 0, x: 40 }}
               animate={{ opacity: 1, x: 0 }}
@@ -38,7 +43,7 @@ const EducationCard = () => {
               <img
                 src={courses[currentIndex].icon}
                 alt={`Icône de la formation ${courses[currentIndex].organisation}`}
-                className=" h-12 w-12 rounded-xl"
+                className="h-12 w-12 rounded-xl"
               />
               <div className="flex flex-col items-center">
                 <h3 className="font-semibold">
@@ -57,25 +62,24 @@ const EducationCard = () => {
         </div>
         <AnimatePresence mode="wait">
           <motion.div
-            className="h-40
-          overflow-y-auto"
+            className="h-40 overflow-y-auto"
             key={currentIndex}
             initial={isFirstRender ? {} : { opacity: 0, x: 40 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -40 }}
             transition={{ duration: 0.4 }}
           >
-            <p className="leading-relaxed text-justify hyphens-auto mx-5">
+            <p className="mx-5 hyphens-auto text-justify leading-relaxed">
               {courses[currentIndex].description}
             </p>
           </motion.div>
         </AnimatePresence>
       </div>
-      <div className="courses-slider flex space-x-3 mt-4">
+      <div className="courses-slider mt-4 flex space-x-3">
         {courses.map((_, index) => (
           <motion.button
             key={index}
-            className="w-2.5 h-2.5 rounded-full bg-gray-300"
+            className="h-2.5 w-2.5 rounded-full bg-gray-300"
             animate={{
               scale: index === currentIndex ? 1.5 : 1,
               backgroundColor: index === currentIndex ? '#5F084C' : '#D1D5DB',
@@ -87,11 +91,11 @@ const EducationCard = () => {
       </div>
 
       <div
-        className="absolute left-0 top-0 w-1/2 h-full cursor-left"
+        className="cursor-left absolute left-0 top-0 h-full w-1/2"
         onClick={prevCourse}
       />
       <div
-        className="absolute right-0 top-0 w-1/2 h-full cursor-right"
+        className="cursor-right absolute right-0 top-0 h-full w-1/2"
         onClick={nextCourse}
       />
     </section>

@@ -38,7 +38,7 @@ const PDFViewerModal = ({ isOpen, onClose, pdfUrl }) => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0, backdropFilter: 'blur(0px)' }}
-          className="fixed inset-0 bg-black bg-opacity-20 flex items-center justify-center z-50"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-20"
         >
           <Overlay />
           <motion.div
@@ -57,10 +57,10 @@ const PDFViewerModal = ({ isOpen, onClose, pdfUrl }) => {
             }}
             exit={{ scale: 0.8, opacity: 0 }}
             transition={{ type: 'spring', stiffness: 260, damping: 15 }}
-            className="bg-white rounded-3xl shadow-xl max-w-4xl w-full max-h-[80vh] z-50 relative flex flex-col overflow-hidden"
+            className="relative z-50 flex max-h-[80vh] w-full max-w-4xl flex-col overflow-hidden rounded-3xl bg-white shadow-xl"
           >
             <CloseIcon onClick={onClose} />
-            <div className="flex-grow overflow-auto custom-scrollbar">
+            <div className="custom-scrollbar flex-grow overflow-auto">
               <div className="w-full">
                 <Document
                   file={pdfUrl}
@@ -71,7 +71,7 @@ const PDFViewerModal = ({ isOpen, onClose, pdfUrl }) => {
                 </Document>
               </div>
               {!pageLoaded && (
-                <div className="text-center mt-4">Chargement du PDF...</div>
+                <div className="mt-4 text-center">Chargement du PDF...</div>
               )}
             </div>
           </motion.div>
@@ -110,14 +110,14 @@ const Overlay = ({ className }) => {
         opacity: 0,
         backdropFilter: 'blur(0px)',
       }}
-      className={`fixed inset-0 h-full w-full bg-black bg-opacity-50 z-50 ${className}`}
+      className={`fixed inset-0 z-50 h-full w-full bg-black bg-opacity-50 ${className}`}
     ></motion.div>
   );
 };
 
 const CloseIcon = ({ onClick }) => {
   return (
-    <button onClick={onClick} className="z-[51] absolute right-10 top-8">
+    <button onClick={onClick} className="absolute right-10 top-8 z-[51]">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"
@@ -128,7 +128,7 @@ const CloseIcon = ({ onClick }) => {
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
-        className="text-black h-5 w-5"
+        className="h-5 w-5 text-black"
       >
         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
         <path d="M18 6l-12 12" />

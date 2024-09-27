@@ -21,9 +21,9 @@ const TogglerCard = () => {
   };
 
   return (
-    <div className="col-span-1 row-span-1 flex items-center h-full p-2 custom-card">
+    <div className="tablet:custom-card hidden tablet:col-span-1 tablet:row-span-1 tablet:flex tablet:h-full tablet:items-center tablet:p-2">
       <button
-        className={`sun-button relative flex-1 flex h-full w-full items-center justify-center ${theme === 'light' ? 'bg-white shadow-sm rounded-2xl' : ''}`}
+        className={`sun-button relative flex h-full w-full flex-1 items-center justify-center ${theme === 'light' ? 'rounded-2xl bg-white shadow-sm' : ''}`}
         onClick={toggleTheme}
         onMouseEnter={() => setIsSunHovered(true)}
         onMouseLeave={() => setIsSunHovered(false)}
@@ -31,7 +31,7 @@ const TogglerCard = () => {
         <SunIcon isHovered={isSunHovered} />
       </button>
       <button
-        className={`moon-button relative flex-1 flex h-full w-full items-center justify-center ${theme === 'dark' ? 'bg-white shadow-sm rounded-2xl' : ''}`}
+        className={`moon-button relative flex h-full w-full flex-1 items-center justify-center ${theme === 'dark' ? 'rounded-2xl bg-white shadow-sm' : ''}`}
         onClick={toggleTheme}
         onMouseEnter={() => setIsMoonHovered(true)}
         onMouseLeave={() => setIsMoonHovered(false)}
