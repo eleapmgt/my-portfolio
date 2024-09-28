@@ -14,7 +14,7 @@ const CurriculumCard = () => {
 
   return (
     <>
-      <div className="custom-card flex w-full items-center justify-between tablet:col-span-1 tablet:row-span-1">
+      <div className="custom-card flex h-[calc((100vh-60px)/5)] w-full items-center justify-between tablet:h-1/2 desktop:col-span-1 desktop:row-span-1 desktop:h-full">
         <div className="flex flex-col pl-12">
           <h3 className="text-lg font-bold uppercase">Curriculum Vitae</h3>
           <span>2024</span>

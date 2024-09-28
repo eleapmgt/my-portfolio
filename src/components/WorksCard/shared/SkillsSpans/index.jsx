@@ -12,7 +12,7 @@ const skillVariants = {
 
 const SkillsSpans = ({ skills = [] }) => {
   return (
-    <div className="flex flex-wrap justify-center gap-3 tablet:justify-normal">
+    <div className="flex flex-wrap justify-center gap-3 tablet:justify-normal tablet:gap-2 desktop:gap-3">
       {skills.map((skill, index) => (
         <motion.span
           key={index}

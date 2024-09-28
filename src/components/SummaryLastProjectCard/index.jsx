@@ -16,7 +16,7 @@ const SummaryLastProjectCard = () => {
 
   return (
     <motion.div
-      className="tablet:auto tablet:custom-card hidden tablet:relative tablet:col-span-5 tablet:row-span-3 tablet:flex tablet:justify-center tablet:overflow-hidden"
+      className="tablet:auto tablet:custom-card hidden tablet:relative tablet:flex tablet:h-full tablet:justify-center tablet:overflow-hidden desktop:col-span-5 desktop:row-span-3"
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
       onClick={handleClick}
@@ -24,7 +24,7 @@ const SummaryLastProjectCard = () => {
       <motion.img
         src="/assets/images/profile-grid/kasa-website.png"
         alt="Image du dernier projet réalisé"
-        className="h-full"
+        className="h-full object-contain"
         initial={{ scale: 1 }}
         animate={{ scale: isHovered ? 1.2 : 1 }}
         transition={{ duration: 0.4 }}

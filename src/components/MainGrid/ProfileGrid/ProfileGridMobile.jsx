@@ -1,13 +1,18 @@
 import ContactFormModal from '../../ContactFormModal';
 import IconCard from '../../IconCard';
-import CurriculumCardMobile from '../../CurriculumCard/CurriculumCardMobile';
+import CurriculumCard from '../../CurriculumCard';
 import ProfileCard from '../../ProfileCard';
+import SkillsCard from '../../SkillsCard';
+import EducationCard from '../../EducationCard';
 
 const ProfileGridMobile = () => {
   return (
-    <div className="flex min-w-full flex-col gap-3 tablet:hidden">
-      {/*       <ProfileCard /> */}
-      <CurriculumCardMobile />
+    <div
+      id="profile-grid-mobile"
+      className="mx-3 flex max-w-full flex-col gap-3 tablet:hidden"
+    >
+      <ProfileCard />
+      <CurriculumCard />
       <div
         id="icons-wrapper"
         className="grid h-[calc((100vh-60px)/5)] grid-cols-3 gap-3"
@@ -28,6 +33,8 @@ const ProfileGridMobile = () => {
           className="h-full w-full"
         />
       </div>
+      <SkillsCard />
+      <EducationCard />
     </div>
   );
 };

@@ -5,7 +5,7 @@ const WorkGrid = () => {
   return (
     <section
       id="works-grid"
-      className="mx-3 flex flex-col gap-3 tablet:m-0 tablet:grid tablet:w-full tablet:grid-cols-9 tablet:grid-rows-[repeat(9,_7rem)] tablet:gap-5"
+      className="mx-3 flex flex-col gap-3 desktop:m-0 desktop:grid desktop:w-full desktop:grid-cols-9 desktop:grid-rows-[repeat(9,_7rem)] desktop:gap-5"
     >
       <LastWorkCard />
       <WorkCard
@@ -25,7 +25,7 @@ const WorkGrid = () => {
         skills={['JavaScript', 'HTML/CSS', 'API', 'Figma']}
         githubLink="https://github.com/eleapmgt/Portfolio-architecte-sophie-bluel"
         imageSrc="/assets/images/works-grid/sophie-bluel-preview.png"
-        customImageStyle="h-full w-[calc(100vw-24px)] object-cover tablet:object-[70%]"
+        customImageStyle="h-full w-[calc(100vw-24px)] object-cover desktop:object-[70%]"
       />
       <WorkCard
         isVertical={false}
@@ -35,7 +35,7 @@ const WorkGrid = () => {
         skills={['HTML', 'CSS', 'Responsive', 'Figma']}
         githubLink="https://github.com/eleapmgt/booki-website"
         imageSrc="/assets/images/works-grid/booki-preview.png"
-        customImageStyle="object-cover w-[calc(100vw-24px)] h-full tablet:pl-5"
+        customImageStyle="object-cover w-[calc(100vw-24px)] h-full desktop:pl-5"
       />
     </section>
   );

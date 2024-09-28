@@ -7,7 +7,7 @@ const IconCard = ({ iconSrc, description, iconRef }) => {
       target="_blank"
       rel="noopener noreferrer"
       aria-label={description}
-      className="custom-card flex items-center justify-center tablet:col-span-2 tablet:row-span-1"
+      className="custom-card flex items-center justify-center desktop:col-span-2 desktop:row-span-1"
       animate="initial"
       whileHover="hover"
     >
