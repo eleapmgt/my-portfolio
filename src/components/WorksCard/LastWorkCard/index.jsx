@@ -26,8 +26,8 @@ const LastWorkCard = () => {
   const handleMouseLeave = () => {
     setIsHovered(false);
     if (videoRef.current) {
-      videoRef.current.playbackRate = -1;
-      videoRef.current.play();
+      /*       videoRef.current.playbackRate = -1;
+       */ videoRef.current.play();
     }
   };
 

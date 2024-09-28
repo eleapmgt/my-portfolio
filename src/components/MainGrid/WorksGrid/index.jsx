@@ -14,8 +14,10 @@ const WorkGrid = () => {
         details="Développement du back-end avec Express et MongoDB, en veillant à la sécurisation des opérations CRUD et à la gestion des authentifications et fichiers utilisateurs, avec une architecture MVC."
         skills={['Node.js', 'Express', 'MongoDB', 'Mongoose', 'JWT']}
         githubLink="https://github.com/eleapmgt/Mon-Vieux-Grimoire-website"
-        imageSrc="/assets/images/works-grid/mvg-preview.png"
-        customImageStyle="tablet:h-full w-[calc(100vw-24px)] h-auto object-cover transform tablet:translate-y-0 translate-y-[-20px]"
+        imageSrcDesktop="/assets/images/works-grid/mon-vieux-grimoire/mvg-preview.png"
+        imageSrcTablet="assets/images/works-grid/mon-vieux-grimoire/mvg-tablet.png"
+        imageSrcMobile="assets/images/works-grid/mon-vieux-grimoire/mvg-preview.png"
+        /*         customImageStyle="tablet:h-full tablet:w-auto w-[calc(100vw-24px)] h-auto object-cover transform tablet:translate-y-0 translate-y-[-20px]" */
       />
       <WorkCard
         isVertical={false}
@@ -24,8 +26,10 @@ const WorkGrid = () => {
         details="Réalisation d'une page web dynamique avec une galerie de projets filtrable, une page de connexion et une interface d'administration. Les projets sont gérés via une API et une modale, avec un formulaire pour la collecte des données, tout en respectant les maquettes Figma."
         skills={['JavaScript', 'HTML/CSS', 'API', 'Figma']}
         githubLink="https://github.com/eleapmgt/Portfolio-architecte-sophie-bluel"
-        imageSrc="/assets/images/works-grid/sophie-bluel-preview.png"
-        customImageStyle="h-full w-[calc(100vw-24px)] object-cover desktop:object-[70%]"
+        imageSrcDesktop="/assets/images/works-grid/sophie-bluel/sophie-bluel-preview.png"
+        imageSrcTablet="/assets/images/works-grid/sophie-bluel/sophie-bluel-preview.png"
+        imageSrcMobile="/assets/images/works-grid/sophie-bluel/sophie-bluel-mobile.png"
+        /*         customImageStyle="h-full w-[calc(100vw-24px)] object-cover desktop:object-[70%]" */
       />
       <WorkCard
         isVertical={false}
@@ -34,8 +38,10 @@ const WorkGrid = () => {
         details="Création d'une interface responsive basée sur les maquettes Figma fournies pour desktop, tablette et mobile. Le projet se concentre sur l'intégration HTML/CSS avec un formulaire de recherche et l'optimisation du positionnement des éléments à l'aide de Flexbox."
         skills={['HTML', 'CSS', 'Responsive', 'Figma']}
         githubLink="https://github.com/eleapmgt/booki-website"
-        imageSrc="/assets/images/works-grid/booki-preview.png"
-        customImageStyle="object-cover w-[calc(100vw-24px)] h-full desktop:pl-5"
+        imageSrcDesktop="/assets/images/works-grid/booki/booki-preview.png"
+        imageSrcTablet="/assets/images/works-grid/booki/booki-preview.png"
+        imageSrcMobile="/assets/images/works-grid/booki/booki-mobile.png"
+        /*         customImageStyle="object-cover w-[calc(100vw-24px)] h-full desktop:pl-5" */
       />
     </section>
   );

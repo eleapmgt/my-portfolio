@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import SkillsSpans from '../shared/SkillsSpans';
 import GithubLink from '../shared/GithubLink';
@@ -8,15 +9,18 @@ const WorkCard = ({
   details,
   skills = [],
   githubLink,
-  imageSrc,
-  customImageStyle = '',
+  imageSrcMobile,
+  imageSrcTablet,
+  imageSrcDesktop,
   isVertical = true,
 }) => {
+  const [isHovered, setIsHovered] = useState(false);
   return (
     <div
-      className={`custom-card flex h-[calc(100dvh-24px)] w-full items-center overflow-hidden tablet:h-[376px] tablet:flex-row desktop:max-h-full desktop:max-w-full ${isVertical ? 'flex-col-reverse desktop:col-span-3 desktop:row-span-6 desktop:h-full desktop:flex-col-reverse' : 'flex-col-reverse desktop:col-span-6 desktop:row-span-3 desktop:flex-row'} `}
+      className={`custom-card flex h-[calc(100dvh-24px)] w-full items-center overflow-hidden tablet:h-[376px] tablet:flex-row ${isVertical ? 'flex-col-reverse desktop:col-span-3 desktop:row-span-6 desktop:h-full desktop:flex-col-reverse' : 'flex-col-reverse desktop:col-span-6 desktop:row-span-3 desktop:flex-row'} `}
     >
       <div
+        id="workcard-text"
         className={`${isVertical ? 'min-[500px]:h-1/2 desktop:h-1/2 desktop:w-[80%] desktop:px-0 desktop:pb-12 desktop:pl-0 desktop:pt-0' : 'desktop:w-7/12 desktop:pl-12'} flex h-3/5 w-full flex-col items-start justify-between space-y-3 p-6 min-[600px]:p-10 tablet:h-full tablet:w-2/3 tablet:justify-evenly tablet:p-14 desktop:justify-center`}
       >
         <div className="space-y-1">
@@ -31,17 +35,27 @@ const WorkCard = ({
         <SkillsSpans skills={skills} />
         <GithubLink githubLink={githubLink} />
       </div>
-      <div
-        className={` ${isVertical ? 'desktop:h-1/2' : 'desktop:h-full'} flex h-2/5 flex-1 items-center justify-center tablet:h-full`}
+      <motion.div
+        id="workcard-img"
+        className={`${isVertical ? 'desktop:h-1/2 desktop:w-full' : 'tablet:w-1/3 desktop:w-5/12'} flex h-2/5 items-center justify-center tablet:h-full`}
+        initial={{ scale: 1 }}
+        animate={{ scale: isHovered ? 1.07 : 1.02 }}
+        transition={{ type: 'spring', stiffness: 300, damping: 8 }}
+        onHoverStart={() => setIsHovered(true)}
+        onHoverEnd={() => setIsHovered(false)}
       >
-        <motion.img
-          src={imageSrc}
-          alt={`Preview de ${title}`}
-          className={`${customImageStyle}`}
-          whileHover={{ scale: 1.07 }}
-          transition={{ type: 'spring', stiffness: 300, damping: 10 }}
-        />
-      </div>
+        <picture className="tablet:h-full tablet:w-auto">
+          <source media="(min-width: 1240px)" srcSet={imageSrcDesktop} />
+          <source media="(min-width: 768px)" srcSet={imageSrcTablet} />
+          <source srcSet={imageSrcMobile} />
+
+          <img
+            src={imageSrcMobile}
+            alt={`Preview de ${title}`}
+            className="tablet:h-full tablet:w-auto tablet:object-cover"
+          />
+        </picture>
+      </motion.div>
     </div>
   );
 };

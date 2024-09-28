@@ -26,7 +26,7 @@ const EducationCard = () => {
       id="section-education"
       className="custom-card relative flex flex-col items-center justify-between space-y-4 p-10 tablet:h-full tablet:justify-center tablet:space-y-2 desktop:col-span-4 desktop:row-span-4 desktop:justify-between"
     >
-      <h2 className="py-4 text-xl font-semibold uppercase tablet:py-0 desktop:py-2">
+      <h2 className="py-4 text-xl font-semibold uppercase tablet:hidden tablet:py-0 desktop:flex desktop:py-2">
         Formations
       </h2>
       <div
