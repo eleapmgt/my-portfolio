@@ -1,10 +1,12 @@
 import ContactFormModal from '../../ContactFormModal';
 import IconCard from '../../IconCard';
 import CurriculumCardMobile from '../../CurriculumCard/CurriculumCardMobile';
+import ProfileCard from '../../ProfileCard';
 
 const ProfileGridMobile = () => {
   return (
     <div className="flex min-w-full flex-col gap-3 tablet:hidden">
+      {/*       <ProfileCard /> */}
       <CurriculumCardMobile />
       <div
         id="icons-wrapper"

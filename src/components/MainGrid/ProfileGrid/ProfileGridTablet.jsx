@@ -1,9 +1,12 @@
 import ContactFormModal from '../../ContactFormModal';
 import IconCard from '../../IconCard';
-import CurriculumCard from '../../CurriculumCard/CurriculumCard';
+
 import SkillsCard from '../../SkillsCard';
 import EducationCard from '../../EducationCard';
+import ProfileCard from '../../ProfileCard';
 
-const ProfileGridTablet = () => {};
+const ProfileGridTablet = () => {
+  return <>{/*       <ProfileCard /> */}</>;
+};
 
 export default ProfileGridTablet;

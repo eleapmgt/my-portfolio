@@ -14,7 +14,7 @@ const WorkCard = ({
 }) => {
   return (
     <div
-      className={`h-[calc(100dvh-24px)] w-full tablet:max-h-full tablet:max-w-full ${isVertical ? 'flex-col-reverse tablet:col-span-3 tablet:row-span-6' : 'flex-col-reverse tablet:col-span-6 tablet:row-span-3 tablet:flex-row'} custom-card flex items-center overflow-hidden`}
+      className={`h-[calc(100dvh-24px)] w-full tablet:max-h-full tablet:max-w-full ${isVertical ? 'flex-col-reverse tablet:col-span-3 tablet:row-span-6 desktop:h-full' : 'flex-col-reverse tablet:col-span-6 tablet:row-span-3 tablet:flex-row'} custom-card flex items-center overflow-hidden`}
     >
       <div
         className={`${isVertical ? 'min-[500px]:h-1/2 tablet:h-1/2 tablet:w-[80%] tablet:px-0 tablet:pb-12 tablet:pl-0 tablet:pt-0' : 'tablet:w-7/12 tablet:pl-12'} flex h-3/5 w-full flex-col items-start justify-between space-y-3 p-6 min-[600px]:p-10 tablet:justify-center`}
