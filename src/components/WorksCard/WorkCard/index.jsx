@@ -12,6 +12,7 @@ const WorkCard = ({
   imageSrcMobile,
   imageSrcTablet,
   imageSrcDesktop,
+  customImgStyle,
   isVertical = true,
 }) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -37,7 +38,7 @@ const WorkCard = ({
       </div>
       <motion.div
         id="workcard-img"
-        className={`${isVertical ? 'desktop:h-1/2 desktop:w-full' : 'tablet:w-1/3 desktop:w-5/12'} flex h-2/5 items-center justify-center tablet:h-full`}
+        className={`${isVertical ? 'tablet:w-1/3 desktop:h-1/2 desktop:w-full' : 'tablet:w-1/3 desktop:w-5/12'} flex h-3/5 items-center justify-center tablet:h-full`}
         initial={{ scale: 1 }}
         animate={{ scale: isHovered ? 1.07 : 1.02 }}
         transition={{ type: 'spring', stiffness: 300, damping: 8 }}
@@ -52,7 +53,7 @@ const WorkCard = ({
           <img
             src={imageSrcMobile}
             alt={`Preview de ${title}`}
-            className="tablet:h-full tablet:w-auto tablet:object-cover"
+            className={` ${customImgStyle} tablet:h-full tablet:w-auto tablet:object-cover`}
           />
         </picture>
       </motion.div>

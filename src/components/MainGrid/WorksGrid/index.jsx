@@ -17,7 +17,6 @@ const WorkGrid = () => {
         imageSrcDesktop="/assets/images/works-grid/mon-vieux-grimoire/mvg-preview.png"
         imageSrcTablet="assets/images/works-grid/mon-vieux-grimoire/mvg-tablet.png"
         imageSrcMobile="assets/images/works-grid/mon-vieux-grimoire/mvg-preview.png"
-        /*         customImageStyle="tablet:h-full tablet:w-auto w-[calc(100vw-24px)] h-auto object-cover transform tablet:translate-y-0 translate-y-[-20px]" */
       />
       <WorkCard
         isVertical={false}
@@ -29,7 +28,6 @@ const WorkGrid = () => {
         imageSrcDesktop="/assets/images/works-grid/sophie-bluel/sophie-bluel-preview.png"
         imageSrcTablet="/assets/images/works-grid/sophie-bluel/sophie-bluel-preview.png"
         imageSrcMobile="/assets/images/works-grid/sophie-bluel/sophie-bluel-mobile.png"
-        /*         customImageStyle="h-full w-[calc(100vw-24px)] object-cover desktop:object-[70%]" */
       />
       <WorkCard
         isVertical={false}
@@ -41,7 +39,7 @@ const WorkGrid = () => {
         imageSrcDesktop="/assets/images/works-grid/booki/booki-preview.png"
         imageSrcTablet="/assets/images/works-grid/booki/booki-preview.png"
         imageSrcMobile="/assets/images/works-grid/booki/booki-mobile.png"
-        /*         customImageStyle="object-cover w-[calc(100vw-24px)] h-full desktop:pl-5" */
+        customImgStyle="tablet:object-[30%]"
       />
     </section>
   );

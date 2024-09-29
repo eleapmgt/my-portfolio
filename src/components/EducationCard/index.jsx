@@ -24,22 +24,22 @@ const EducationCard = () => {
   return (
     <section
       id="section-education"
-      className="custom-card relative flex flex-col items-center justify-between space-y-4 p-10 tablet:h-full tablet:justify-center tablet:space-y-2 desktop:col-span-4 desktop:row-span-4 desktop:justify-between"
+      className="custom-card relative flex flex-col items-center justify-between space-y-4 p-10 tablet:h-full tablet:justify-center tablet:px-8 tablet:py-12 desktop:col-span-4 desktop:row-span-4 desktop:justify-between desktop:p-10"
     >
-      <h2 className="py-4 text-xl font-semibold uppercase tablet:hidden tablet:py-0 desktop:flex desktop:py-2">
+      <h2 className="py-4 text-xl font-semibold uppercase tablet:py-0 desktop:flex desktop:py-2">
         Formations
       </h2>
       <div
         id="courses-container"
-        className="relative flex w-full flex-col tablet:h-4/5"
+        className="relative flex w-full flex-col tablet:h-full tablet:space-y-6"
       >
         <div
           id="courses-title"
-          className="flex items-center justify-center pb-4 tablet:h-1/3 tablet:pb-0 desktop:h-32 desktop:pb-10"
+          className="flex items-center justify-center pb-4 tablet:h-auto tablet:pb-0 desktop:h-32 desktop:pb-2"
         >
           <AnimatePresence mode="wait">
             <motion.div
-              className="flex flex-col items-center space-y-6 tablet:flex-row tablet:gap-4 tablet:space-y-0 desktop:flex-col desktop:gap-0 desktop:space-y-6"
+              className="flex flex-col items-center space-y-6 tablet:flex-row tablet:gap-4 tablet:space-y-0 desktop:flex-col desktop:gap-0 desktop:space-y-2"
               key={currentIndex}
               initial={isFirstRender ? {} : { opacity: 0, x: 40 }}
               animate={{ opacity: 1, x: 0 }}
@@ -69,7 +69,7 @@ const EducationCard = () => {
         <AnimatePresence mode="wait">
           <motion.div
             id="courses-description"
-            className="mb-2 flex items-center overflow-y-auto tablet:h-2/3 desktop:h-40"
+            className="mb-2 flex items-center overflow-y-auto tablet:h-auto desktop:h-40"
             key={currentIndex}
             initial={isFirstRender ? {} : { opacity: 0, x: 40 }}
             animate={{ opacity: 1, x: 0 }}
