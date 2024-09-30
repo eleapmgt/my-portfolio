@@ -31,7 +31,7 @@ const EducationCard = () => {
       </h2>
       <div
         id="courses-container"
-        className="relative flex w-full flex-col tablet:h-full tablet:space-y-6"
+        className="relative flex w-full flex-col tablet:h-full tablet:space-y-6 desktop:space-y-2"
       >
         <div
           id="courses-title"
@@ -86,9 +86,9 @@ const EducationCard = () => {
         {courses.map((_, index) => (
           <motion.button
             key={index}
-            className="h-2.5 w-2.5 rounded-full bg-gray-300"
+            className="h-4 w-4 rounded-full bg-gray-300"
             animate={{
-              scale: index === currentIndex ? 1.5 : 1,
+              scale: index === currentIndex ? 1 : 0.8,
               backgroundColor: index === currentIndex ? '#5F084C' : '#D1D5DB',
             }}
             onClick={() => setCurrentIndex(index)}

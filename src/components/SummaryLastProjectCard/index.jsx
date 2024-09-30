@@ -15,9 +15,9 @@ const SummaryLastProjectCard = () => {
   return (
     <motion.div
       onClick={handleClick}
-      className="tablet:auto tablet:custom-card bg hidden tablet:flex tablet:h-full tablet:cursor-pointer tablet:flex-row tablet:items-center tablet:justify-center tablet:gap-5 tablet:overflow-hidden desktop:col-span-5 desktop:row-span-3"
+      className="tablet:auto tablet:custom-card hidden tablet:flex tablet:h-full tablet:cursor-pointer tablet:flex-row tablet:items-center tablet:justify-center tablet:gap-5 tablet:overflow-hidden desktop:col-span-5 desktop:row-span-3"
     >
-      <div id="my-last-project-title" className="w-1/2">
+      <div id="my-last-project-title" className="desktop:w-1/2">
         <div className="w-full text-center text-6xl font-semibold">MON</div>
         <div className="w-full text-center text-6xl font-thin italic">
           DERNIER

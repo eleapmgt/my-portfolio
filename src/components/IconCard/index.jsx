@@ -23,7 +23,7 @@ const IconCard = ({ iconSrc, description, iconRef }) => {
           hover: {
             rotate: [0, -5, 5, -5],
             transition: {
-              duration: 0.5,
+              duration: 0.4,
               repeat: Infinity,
               ease: 'easeInOut',
               repeatType: 'mirror',

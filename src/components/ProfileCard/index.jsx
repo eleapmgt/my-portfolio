@@ -5,7 +5,7 @@ const ProfileCard = () => {
         <img
           src="./icons/elea-pimouguet-profile.png"
           alt="Avatar"
-          className="mb-2 h-20 w-20 rounded-full border-4 border-white shadow-md tablet:h-32 tablet:w-32"
+          className="mb-2 h-20 w-20 rounded-full shadow-2xl tablet:h-32 tablet:w-32"
         />
         <h1 className="text-3xl font-semibold uppercase tablet:pt-2 tablet:text-4xl">
           Elea Pimouguet
