@@ -1,7 +1,9 @@
 import { motion, useAnimation } from 'framer-motion';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useContext } from 'react';
+import { ThemeContext } from '../../../context/ThemeContext';
 
 const SunIcon = ({ isHovered }) => {
+  const { isDarkMode } = useContext(ThemeContext);
   const controls = useAnimation();
   const rotationRef = useRef(0);
   const lastTimeRef = useRef(0);
@@ -34,7 +36,7 @@ const SunIcon = ({ isHovered }) => {
       fill="none"
       viewBox="0 0 24 24"
       strokeWidth={1}
-      stroke="currentColor"
+      stroke={`${isDarkMode ? '#f7fff7' : 'currentColor'}`}
       title="Icône d'un soleil représentant le Light Mode"
       className="size-12"
       animate={controls}

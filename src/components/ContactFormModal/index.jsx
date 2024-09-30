@@ -1,12 +1,14 @@
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState, useRef, useContext } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useForm, ValidationError } from '@formspree/react';
+import { ThemeContext } from '../../context/ThemeContext';
 import {
   EnvelopeIcon,
   ChatBubbleBottomCenterTextIcon,
 } from '@heroicons/react/24/outline';
 
 const ContactFormModal = () => {
+  const { isDarkMode } = useContext(ThemeContext);
   const [isOpen, setIsOpen] = useState(false);
   const toggleModal = () => setIsOpen(!isOpen);
   const [state, handleSubmit] = useForm('mjkbqqde');
@@ -32,10 +34,10 @@ const ContactFormModal = () => {
         onClick={toggleModal}
         animate="initial"
         whileHover="hover"
-        className="custom-card flex h-full w-full items-center justify-center tablet:col-span-1 tablet:row-span-1"
+        className={`${isDarkMode ? 'custom-card-dark' : 'custom-card'} flex h-full w-full items-center justify-center tablet:col-span-1 tablet:row-span-1`}
       >
         <motion.img
-          src="/icons/mail-black.png"
+          src={`${isDarkMode ? '/icons/mail-white.png' : '/icons/mail-black.png'}`}
           alt="Icône de mail pour accéder au formulaire de contact"
           className="h-16 w-16"
           variants={{

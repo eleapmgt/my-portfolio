@@ -1,10 +1,14 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { motion } from 'framer-motion';
+import { ThemeContext } from '../../context/ThemeContext';
 import Lottie from 'react-lottie-player';
-import downloadAnimation from '/src/animations/download-animation.json';
-import blinkingAnimation from '/src/animations/blinking-eye-animation.json';
+import downloadDarkAnimation from '/src/animations/DownloadIconAnimation/download-animation-dark.json';
+import downloadLightAnimation from '/src/animations/DownloadIconAnimation/download-animation-light.json';
+import blinkingDarkAnimation from '/src/animations/BlinkingEyeAnimation/blinking-eye-animation-dark.json';
+import blinkingLightAnimation from '/src/animations/BlinkingEyeAnimation/blinking-eye-animation-light.json';
 
 const CurriculumCard = () => {
+  const { isDarkMode } = useContext(ThemeContext);
   const [isPlaying, setIsPlaying] = useState(false);
   const [isBlinking, setIsBlinking] = useState(false);
 
@@ -14,7 +18,9 @@ const CurriculumCard = () => {
 
   return (
     <>
-      <div className="custom-card flex h-[calc((100vh-60px)/5)] w-full items-center justify-between tablet:h-1/2 desktop:col-span-1 desktop:row-span-1 desktop:h-full">
+      <div
+        className={`${isDarkMode ? 'custom-card-dark' : 'custom-card'} flex h-[calc((100vh-60px)/5)] w-full items-center justify-between tablet:h-1/2 desktop:col-span-1 desktop:row-span-1 desktop:h-full`}
+      >
         <div className="flex flex-col pl-12">
           <h3 className="text-lg font-bold uppercase">Curriculum Vitae</h3>
           <span>2024</span>
@@ -32,7 +38,9 @@ const CurriculumCard = () => {
           >
             <Lottie
               loop
-              animationData={downloadAnimation}
+              animationData={
+                isDarkMode ? downloadLightAnimation : downloadDarkAnimation
+              }
               play={isPlaying}
               speed={2}
               style={{ height: '60px', width: '60px' }}
@@ -52,7 +60,9 @@ const CurriculumCard = () => {
           >
             <Lottie
               loop
-              animationData={blinkingAnimation}
+              animationData={
+                isDarkMode ? blinkingLightAnimation : blinkingDarkAnimation
+              }
               play={isBlinking}
               speed={1}
               style={{ height: '35px', width: '35px' }}

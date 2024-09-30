@@ -1,8 +1,10 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { HyperText } from '../../animations/HyperTextAnimation';
+import { ThemeContext } from '../../context/ThemeContext';
 import Earth from './Globe';
 
 const MapCard = () => {
+  const { isDarkMode } = useContext(ThemeContext);
   const [triggerAnimation, setTriggerAnimation] = useState(false);
 
   const handleMouseEnter = () => {
@@ -12,7 +14,7 @@ const MapCard = () => {
   return (
     <>
       <div
-        className="desktop:custom-card hidden desktop:col-span-1 desktop:row-span-1 desktop:flex desktop:items-center desktop:justify-center desktop:overflow-hidden"
+        className={`${isDarkMode ? 'desktop:custom-card-dark' : 'desktop:custom-card'} hidden desktop:col-span-1 desktop:row-span-1 desktop:flex desktop:items-center desktop:justify-center desktop:overflow-hidden`}
         onMouseEnter={handleMouseEnter}
       >
         <div className="absolute left-7 top-5 z-10 font-mono uppercase">

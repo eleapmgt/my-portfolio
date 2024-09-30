@@ -1,13 +1,17 @@
+import { useContext } from 'react';
 import { motion } from 'framer-motion';
+import { ThemeContext } from '../../context/ThemeContext';
 
 const IconCard = ({ iconSrc, description, iconRef }) => {
+  const { isDarkMode } = useContext(ThemeContext);
+
   return (
     <motion.a
       href={iconRef}
       target="_blank"
       rel="noopener noreferrer"
       aria-label={description}
-      className="custom-card flex items-center justify-center desktop:col-span-2 desktop:row-span-1"
+      className={`${isDarkMode ? 'custom-card-dark' : 'custom-card'} flex items-center justify-center desktop:col-span-2 desktop:row-span-1`}
       animate="initial"
       whileHover="hover"
     >

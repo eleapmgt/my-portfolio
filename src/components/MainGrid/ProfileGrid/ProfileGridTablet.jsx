@@ -1,3 +1,5 @@
+import { useContext } from 'react';
+import { ThemeContext } from '../../../context/ThemeContext';
 import ContactFormModal from '../../ContactFormModal';
 import IconCard from '../../IconCard';
 import SkillsCard from '../../SkillsCard';
@@ -7,6 +9,8 @@ import CurriculumCard from '../../CurriculumCard';
 import SummaryLastProjectCard from '../../SummaryLastProjectCard';
 
 const ProfileGridTablet = () => {
+  const { isDarkMode } = useContext(ThemeContext);
+
   return (
     <div
       id="profile-grid-tablet"
@@ -40,12 +44,12 @@ const ProfileGridTablet = () => {
         >
           <IconCard
             iconRef="https://github.com/eleapmgt"
-            iconSrc="/icons/github-black.png"
+            iconSrc={`${isDarkMode ? '/icons/github-white.png' : '/icons/github-black.png'}`}
             description="Icône de Github"
           />
           <IconCard
             iconRef="https://www.linkedin.com/in/elea-pimouguet/"
-            iconSrc="/icons/linkedin-black.png"
+            iconSrc={`${isDarkMode ? '/icons/linkedin-white.png' : '/icons/linkedin-black.png'}`}
             description="Icône de Linkedin"
           />
         </div>

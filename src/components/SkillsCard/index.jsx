@@ -1,13 +1,16 @@
+import { useContext } from 'react';
 import { motion } from 'framer-motion';
+import { ThemeContext } from '../../context/ThemeContext';
 import SkillsArray from '/src/data/skills.json';
 
 const SkillsCard = () => {
+  const { isDarkMode } = useContext(ThemeContext);
   return (
     <section
       id="section-skills"
-      className="custom-card relative h-[calc((100vh-60px)/5)] overflow-hidden tablet:h-1/2 desktop:col-span-7 desktop:row-span-1 desktop:h-full"
+      className={`${isDarkMode ? 'custom-card-dark' : 'custom-card'} relative h-[calc((100vh-60px)/5)] overflow-hidden tablet:h-1/2 desktop:col-span-7 desktop:row-span-1 desktop:h-full`}
     >
-      <div className="absolute inset-y-0 left-0 z-10 w-[70px] bg-gradient-to-r from-gray-50 via-gray-50 to-transparent"></div>
+      <div className="dark:via-grey-900 absolute inset-y-0 left-0 z-10 w-[70px] bg-gradient-to-r from-gray-50 via-gray-50 to-transparent dark:from-gray-900"></div>
       <div className="absolute inset-y-0 right-0 z-10 w-[70px] bg-gradient-to-l from-gray-50 via-gray-50 to-transparent"></div>
       <div className="relative flex h-full items-center">
         <motion.div
