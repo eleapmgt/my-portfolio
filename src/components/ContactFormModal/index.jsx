@@ -56,7 +56,7 @@ const ContactFormModal = () => {
         />
       </motion.button>
 
-      <AnimatePresence>
+      <AnimatePresence mode="sync">
         {isOpen && (
           <motion.div
             initial={{ opacity: 0 }}

@@ -3,7 +3,7 @@ const ProfileCard = () => {
     <div className="custom-card flex h-[calc(2*(100vh-60px)/5)] items-center justify-center tablet:col-span-5 tablet:row-span-3 tablet:h-full tablet:w-full">
       <div className="profile-card-wrapper m-5 flex flex-col items-center justify-center gap-2">
         <img
-          src="./icons/profile-icon.png"
+          src="./icons/elea-pimouguet-profile.png"
           alt="Avatar"
           className="mb-2 h-20 w-20 rounded-full border-4 border-white shadow-md tablet:h-32 tablet:w-32"
         />

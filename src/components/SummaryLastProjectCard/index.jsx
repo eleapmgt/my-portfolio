@@ -1,9 +1,8 @@
-import { useState, useCallback } from 'react';
+import { useCallback } from 'react';
 import { motion } from 'framer-motion';
-import ArrowUpRight from './RightArrow';
+import { ArrowUpRightIcon } from '@heroicons/react/24/outline';
 
 const SummaryLastProjectCard = () => {
-  const [isHovered, setIsHovered] = useState(false);
   const handleClick = useCallback(() => {
     const worksSection = document.getElementById('works-grid');
     if (worksSection) {
@@ -13,40 +12,23 @@ const SummaryLastProjectCard = () => {
       window.scrollTo({ top: y, behavior: 'smooth' });
     }
   }, []);
-
   return (
     <motion.div
-      className="tablet:auto tablet:custom-card hidden tablet:relative tablet:flex tablet:h-full tablet:justify-center tablet:overflow-hidden desktop:col-span-5 desktop:row-span-3"
-      onHoverStart={() => setIsHovered(true)}
-      onHoverEnd={() => setIsHovered(false)}
       onClick={handleClick}
+      className="tablet:auto tablet:custom-card bg hidden tablet:flex tablet:h-full tablet:cursor-pointer tablet:flex-row tablet:items-center tablet:justify-center tablet:gap-5 tablet:overflow-hidden desktop:col-span-5 desktop:row-span-3"
     >
-      <motion.img
-        src="/assets/images/profile-grid/kasa-website.png"
-        alt="Image du dernier projet réalisé"
-        className="h-full object-contain"
-        initial={{ scale: 1 }}
-        animate={{ scale: isHovered ? 1.2 : 1 }}
-        transition={{ duration: 0.4 }}
-      />
-      <motion.div
-        className="absolute inset-0 bg-gradient-to-t from-white via-white/80 to-transparent opacity-0 transition-opacity duration-300 ease-in-out"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: isHovered ? 1 : 0 }}
-        transition={{ duration: 0.3 }}
-      />
-      <motion.div
-        className="absolute inset-0 flex flex-col justify-end p-6 pl-9"
-        initial={{ y: 20, opacity: 0 }}
-        animate={{ y: isHovered ? 0 : 20, opacity: isHovered ? 1 : 0 }}
-        transition={{ duration: 0.3, delay: 0.1 }}
-      >
-        <h3 className="text-2xl font-semibold">Kasa Website</h3>
-        <div className="flex flex-row items-center space-x-2">
-          <p className="text-base">Découvrir mon dernier projet</p>
-          <ArrowUpRight />
+      <div id="my-last-project-title" className="w-1/2">
+        <div className="w-full text-center text-6xl font-semibold">MON</div>
+        <div className="w-full text-center text-6xl font-thin italic">
+          DERNIER
         </div>
-      </motion.div>
+        <div className="w-full text-center text-6xl font-semibold">PROJET</div>
+      </div>
+      <div className="flex w-1/4 items-end justify-center">
+        <button className="flex h-16 w-16 items-center justify-center rounded-full bg-[#313132] text-white transition-transform hover:scale-110 hover:bg-black">
+          <ArrowUpRightIcon className="h-8 w-8" />
+        </button>
+      </div>
     </motion.div>
   );
 };
