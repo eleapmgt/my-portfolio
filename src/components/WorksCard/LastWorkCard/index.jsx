@@ -86,7 +86,7 @@ const LastWorkCard = () => {
       {/* Video for desktop */}
       <div
         id="card-video"
-        className="hidden desktop:tablet:h-full desktop:flex desktop:h-2/5 desktop:w-full desktop:flex-1 desktop:items-center desktop:justify-center"
+        className="hidden desktop:flex desktop:h-full desktop:w-full desktop:flex-1 desktop:items-center desktop:justify-center"
       >
         <div
           className="flex h-full w-full items-center justify-center bg-white shadow-sm dark:grayscale-[5%] tablet:h-full"
