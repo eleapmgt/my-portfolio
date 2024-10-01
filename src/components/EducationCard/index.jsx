@@ -35,6 +35,7 @@ const EducationCard = () => {
     <section
       id="section-education"
       className={`${isDarkMode ? 'custom-card-dark' : 'custom-card'} relative flex flex-col items-center justify-between space-y-4 p-10 tablet:h-full tablet:justify-center tablet:px-8 tablet:py-12 desktop:col-span-4 desktop:row-span-4 desktop:justify-between desktop:p-10`}
+      {...handlers}
     >
       <h2 className="py-4 text-xl font-semibold uppercase tablet:py-0 desktop:flex desktop:py-2">
         Formations
@@ -42,7 +43,6 @@ const EducationCard = () => {
       <div
         id="courses-container"
         className="relative flex w-full flex-col tablet:h-full tablet:space-y-6 desktop:space-y-2"
-        {...handlers}
       >
         <div
           id="courses-title"
