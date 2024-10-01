@@ -1,13 +1,16 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, useContext } from 'react';
 import { motion } from 'framer-motion';
+import { ThemeContext } from '../../context/ThemeContext';
 
 const COLORS = {
   BLEU_PROFOND: '#121212',
   VERT_SARCELLE: '#50A3AB',
   JAUNE_SUBTIL: '#FADAC1',
+  VIOLET_PASTEL: '#CCA9DD',
 };
 
 const Background = ({ disableAnimation = false }) => {
+  const { isDarkMode } = useContext(ThemeContext);
   const canvasRef = useRef(null);
   const [particles, setParticles] = useState([]);
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
@@ -55,7 +58,7 @@ const Background = ({ disableAnimation = false }) => {
     let animationFrameId;
 
     const render = () => {
-      ctx.fillStyle = COLORS.BLEU_PROFOND;
+      ctx.fillStyle = isDarkMode ? COLORS.BLEU_PROFOND : COLORS.VIOLET_PASTEL;
       ctx.fillRect(0, 0, dimensions.width, dimensions.height);
 
       particles.forEach((particle) => {
