@@ -18,6 +18,7 @@ const IconCard = ({ iconSrc, description, iconRef }) => {
       <motion.img
         src={iconSrc}
         alt={description}
+        loading="lazy"
         className="h-16 w-16"
         variants={{
           initial: {

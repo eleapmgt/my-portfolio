@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect, useContext } from 'react';
 import { ThemeContext } from '../../../context/ThemeContext';
+import { motion } from 'framer-motion';
 import SkillsSpans from '../shared/SkillsSpans';
 import VideoKasa from '/assets/videos/works-grid/kasa-video.mp4';
 import GithubLink from '../shared/GithubLink';
@@ -38,7 +39,7 @@ const LastWorkCard = () => {
     >
       <div
         id="card-text"
-        className="flex h-3/5 w-full flex-col items-start justify-between space-y-3 p-6 text-justify min-[600px]:p-10 tablet:h-full tablet:w-[65%] tablet:justify-center desktop:w-7/12 desktop:p-20"
+        className="flex h-3/5 w-full flex-col items-start justify-between space-y-3 p-6 text-justify min-[600px]:p-10 tablet:h-full tablet:w-2/3 tablet:justify-center desktop:w-7/12 desktop:p-20"
       >
         <div className="space-y-1">
           <h2 className="text-2xl font-semibold">Kasa Website</h2>
@@ -57,12 +58,38 @@ const LastWorkCard = () => {
         <SkillsSpans skills={skills} />
         <GithubLink githubLink="https://github.com/eleapmgt/kasa-website" />
       </div>
+
+      {/* Image for mobile and tablet */}
+      <motion.div
+        id="workcard-img"
+        className="flex w-full items-center justify-center tablet:h-full tablet:w-1/3 desktop:hidden"
+        initial={{ scale: 1 }}
+        animate={{ scale: isHovered ? 1.07 : 1.02 }}
+        transition={{ type: 'spring', stiffness: 300, damping: 8 }}
+        onHoverStart={() => setIsHovered(true)}
+        onHoverEnd={() => setIsHovered(false)}
+      >
+        <picture className="tablet:h-full tablet:w-auto">
+          <source
+            media="(min-width: 768px)"
+            srcSet="/assets/images/works-grid/kasa/kasa-preview.webp"
+          />
+          <img
+            src="/assets/images/works-grid/kasa/kasa-mobile.webp"
+            alt="Preview de Kasa Website"
+            loading="lazy"
+            className="h-full w-full object-cover"
+          />
+        </picture>
+      </motion.div>
+
+      {/* Video for desktop */}
       <div
         id="card-video"
-        className="flex h-2/5 w-full items-center justify-center tablet:h-full tablet:flex-1"
+        className="hidden desktop:tablet:h-full desktop:flex desktop:h-2/5 desktop:w-full desktop:flex-1 desktop:items-center desktop:justify-center"
       >
         <div
-          className="flex h-full w-full items-center justify-center bg-white shadow-sm dark:grayscale-[20%] tablet:h-full"
+          className="flex h-full w-full items-center justify-center bg-white shadow-sm dark:grayscale-[5%] tablet:h-full"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={handleMouseLeave}
         >

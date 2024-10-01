@@ -1,6 +1,7 @@
 import { useState, useEffect, useContext } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ThemeContext } from '../../context/ThemeContext';
+import { useSwipeable } from 'react-swipeable';
 import CoursesData from '/src/data/courses.json';
 
 const EducationCard = () => {
@@ -23,6 +24,13 @@ const EducationCard = () => {
     setIsFirstRender(false);
   }, []);
 
+  const handlers = useSwipeable({
+    onSwipedLeft: nextCourse,
+    onSwipedRight: prevCourse,
+    preventDefaultTouchmoveEvent: true,
+    trackMouse: true,
+  });
+
   return (
     <section
       id="section-education"
@@ -34,6 +42,7 @@ const EducationCard = () => {
       <div
         id="courses-container"
         className="relative flex w-full flex-col tablet:h-full tablet:space-y-6 desktop:space-y-2"
+        {...handlers}
       >
         <div
           id="courses-title"
@@ -51,6 +60,7 @@ const EducationCard = () => {
               <img
                 src={courses[currentIndex].icon}
                 alt={`Icône de la formation ${courses[currentIndex].organisation}`}
+                loading="lazy"
                 className="h-12 w-12 rounded-xl"
               />
               <div className="flex flex-col items-center tablet:items-start desktop:items-center">

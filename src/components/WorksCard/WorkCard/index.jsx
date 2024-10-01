@@ -56,6 +56,7 @@ const WorkCard = ({
           <img
             src={imageSrcMobile}
             alt={`Preview de ${title}`}
+            loading="lazy"
             className={` ${customImgStyle} tablet:h-full tablet:w-auto tablet:object-cover`}
           />
         </picture>

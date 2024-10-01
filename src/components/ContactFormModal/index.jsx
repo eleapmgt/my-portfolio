@@ -39,6 +39,7 @@ const ContactFormModal = () => {
         <motion.img
           src={`${isDarkMode ? '/icons/mail-white.png' : '/icons/mail-black.png'}`}
           alt="Icône de mail pour accéder au formulaire de contact"
+          loading="lazy"
           className="h-16 w-16"
           variants={{
             initial: {

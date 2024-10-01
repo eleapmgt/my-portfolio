@@ -10,8 +10,9 @@ const ProfileCard = () => {
     >
       <div className="profile-card-wrapper m-5 flex flex-col items-center justify-center gap-2">
         <img
-          src="./icons/elea-pimouguet-profile.png"
+          src="/assets/images/elea-pimouguet-profile.webp"
           alt="Avatar"
+          loading="lazy"
           className="mb-2 h-20 w-20 rounded-full shadow-2xl tablet:h-32 tablet:w-32"
         />
         <h1 className="text-3xl font-semibold uppercase tablet:pt-2 tablet:text-4xl">

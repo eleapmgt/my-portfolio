@@ -45,7 +45,7 @@ body::after {
 }
 
 img {
-  @apply dark:grayscale-[20%];
+  @apply dark:grayscale-[10%];
 }
 
 @layer base {
@@ -107,14 +107,6 @@ img {
         12 12,
       auto;
   }
-
-  /*   .goo {
-    filter: url('#goo');
-  }
-
-  .goo > * {
-    mix-blend-mode: difference;
-  } */
 
   /* Scrollbar */
   .custom-scrollbar {
