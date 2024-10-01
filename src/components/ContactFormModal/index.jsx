@@ -58,7 +58,7 @@ const ContactFormModal = () => {
         />
       </motion.button>
 
-      <AnimatePresence mode="sync">
+      <AnimatePresence>
         {isOpen && (
           <motion.div
             initial={{ opacity: 0 }}
@@ -83,15 +83,17 @@ const ContactFormModal = () => {
               }}
               exit={{ scale: 0.8, opacity: 0 }}
               transition={{ type: 'spring', stiffness: 260, damping: 15 }}
-              className="relative z-50 w-full max-w-lg space-y-6 rounded-3xl bg-white p-10 shadow-xl"
+              className="relative z-50 w-full max-w-lg space-y-6 rounded-3xl bg-white p-10 shadow-xl dark:border dark:border-gray-200/20 dark:bg-[#1f1f1f]"
             >
               <CloseIcon onClick={toggleModal} />
-              <h2 className="text-left text-2xl font-semibold">Me contacter</h2>
+              <h2 className="text-left text-2xl font-semibold dark:text-[#f7fff7]">
+                Me contacter
+              </h2>
               <form onSubmit={handleSubmit} className="flex flex-col space-y-8">
                 <div className="relative">
                   <label
                     htmlFor="email"
-                    className="text-md mb-2 block font-medium"
+                    className="text-md #f7fff7 mb-2 block font-medium"
                   >
                     Adresse e-mail
                   </label>
@@ -102,7 +104,7 @@ const ContactFormModal = () => {
                       type="email"
                       name="email"
                       required
-                      className="w-full rounded-lg border border-gray-300 px-4 py-2 pl-10 outline-none transition duration-200 focus:border-transparent focus:ring-2 focus:ring-gray-200"
+                      className="w-full rounded-lg border border-gray-300 px-4 py-2 pl-10 outline-none transition duration-200 focus:border-transparent focus:ring-2 focus:ring-gray-200 dark:text-[#313132]"
                       placeholder="votre@email.com"
                     />
                   </div>
@@ -116,7 +118,7 @@ const ContactFormModal = () => {
                 <div className="relative">
                   <label
                     htmlFor="message"
-                    className="text-md mb-2 block font-medium"
+                    className="text-md mb-2 block font-medium dark:text-[#f7fff7]"
                   >
                     Message
                   </label>
@@ -127,7 +129,7 @@ const ContactFormModal = () => {
                       name="message"
                       rows="6"
                       required
-                      className="w-full resize-none rounded-lg border border-gray-300 px-4 py-2 pl-10 outline-none transition duration-200 focus:border-transparent focus:ring-2 focus:ring-gray-200"
+                      className="w-full resize-none rounded-lg border border-gray-300 px-4 py-2 pl-10 outline-none transition duration-200 focus:border-transparent focus:ring-2 focus:ring-gray-200 dark:text-[#313132]"
                       placeholder="Votre message ici..."
                     />
                   </div>
@@ -139,18 +141,18 @@ const ContactFormModal = () => {
                   />
                 </div>
                 <div className="flex justify-end space-x-2">
-                  <button
+                  <motion.button
                     type="submit"
                     disabled={state.submitting}
-                    className="w-full transform rounded-lg bg-gray-600 px-4 py-2 text-white transition duration-200 ease-in-out hover:-translate-y-1 hover:bg-gray-700 hover:shadow-lg focus:outline-none focus:ring-gray-500 focus:ring-opacity-50"
+                    className="dark:shadow-customShadow w-full transform rounded-lg bg-[#313132] px-4 py-2 text-white transition duration-200 ease-in-out hover:scale-105 active:scale-95 dark:border dark:border-gray-200/20 dark:bg-[rgba(83,82,82,1)] dark:text-[#f7fff7] dark:hover:bg-[#414142]"
                   >
                     {state.submitting ? 'Envoi en cours...' : 'Envoyer'}
-                  </button>
+                  </motion.button>
                 </div>
               </form>
               {state.succeeded && (
-                <div className="font-semibold text-green-800">
-                  Merci pour votre message !
+                <div className="pt-2 font-semibold text-green-600">
+                  Merci pour votre message ! 😊
                 </div>
               )}
               {state.errors && (
@@ -199,7 +201,7 @@ const CloseIcon = ({ onClick }) => {
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
-        className="h-5 w-5 text-black"
+        className="h-5 w-5 text-black dark:text-[#f7fff7]"
       >
         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
         <path d="M18 6l-12 12" />

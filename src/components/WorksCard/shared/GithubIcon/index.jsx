@@ -1,11 +1,25 @@
-const GithubIcon = ({ isMobile }) => {
+import { useContext } from 'react';
+import { ThemeContext } from '../../../../context/ThemeContext';
+
+const GithubIcon = ({ isMobile, isTablet }) => {
+  const { isDarkMode } = useContext(ThemeContext);
+  const getColor = () => {
+    if (isMobile) {
+      return isDarkMode ? '#f7fff7' : '#313132';
+    }
+    if (isTablet || !isMobile) {
+      return isDarkMode ? '#f7fff7' : '#313132';
+    }
+    return '#313132';
+  };
+
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
       width="16"
       height="16"
-      color={`${isMobile} ? 'white' : '#313132'`}
+      color={getColor()}
       fill="none"
     >
       <path

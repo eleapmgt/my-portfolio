@@ -13,7 +13,7 @@ const TogglerCard = () => {
       className={`${isDarkMode ? 'tablet:custom-card-dark' : 'tablet:custom-card'} hidden tablet:col-span-1 tablet:row-span-1 tablet:flex tablet:h-full tablet:items-center tablet:p-2`}
     >
       <button
-        className={`sun-button relative flex h-full w-full flex-1 items-center justify-center ${!isDarkMode ? 'rounded-2xl bg-white shadow-sm' : ''}`}
+        className={`sun-button relative flex h-full w-full flex-1 items-center justify-center ${!isDarkMode ? 'rounded-2xl bg-white shadow-sm dark:bg-[rgba(60,60,60,0.8)]' : ''}`}
         onClick={toggleDarkMode}
         onMouseEnter={() => setIsSunHovered(true)}
         onMouseLeave={() => setIsSunHovered(false)}
@@ -21,7 +21,7 @@ const TogglerCard = () => {
         <SunIcon isHovered={isSunHovered} />
       </button>
       <button
-        className={`moon-button relative flex h-full w-full flex-1 items-center justify-center ${isDarkMode ? 'rounded-2xl bg-white shadow-sm' : ''}`}
+        className={`moon-button relative flex h-full w-full flex-1 items-center justify-center ${isDarkMode ? 'rounded-2xl bg-white shadow-sm dark:bg-[rgba(60,60,60,0.8)]' : ''}`}
         onClick={toggleDarkMode}
         onMouseEnter={() => setIsMoonHovered(true)}
         onMouseLeave={() => setIsMoonHovered(false)}

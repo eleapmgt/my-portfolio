@@ -91,7 +91,14 @@ const EducationCard = () => {
             className="h-4 w-4 rounded-full bg-gray-300"
             animate={{
               scale: index === currentIndex ? 1 : 0.8,
-              backgroundColor: index === currentIndex ? '#5F084C' : '#D1D5DB',
+              backgroundColor:
+                index === currentIndex
+                  ? isDarkMode
+                    ? '#FFFFFF'
+                    : '#000000'
+                  : isDarkMode
+                    ? '#4B5563'
+                    : '#D1D5DB',
             }}
             onClick={() => setCurrentIndex(index)}
             aria-label={`Aller à la formation ${index + 1}`}
@@ -101,11 +108,11 @@ const EducationCard = () => {
 
       {/* Curseurs gauche et droite */}
       <div
-        className="cursor-left absolute left-0 top-0 h-full w-1/2"
+        className={`${isDarkMode ? 'cursor-left-white' : 'cursor-left-dark'} absolute left-0 top-0 h-full w-1/2`}
         onClick={prevCourse}
       />
       <div
-        className="cursor-right absolute right-0 top-0 h-full w-1/2"
+        className={`${isDarkMode ? 'cursor-right-white' : 'cursor-right-dark'} absolute right-0 top-0 h-full w-1/2`}
         onClick={nextCourse}
       />
     </section>

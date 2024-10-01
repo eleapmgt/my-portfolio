@@ -1,5 +1,6 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { motion } from 'framer-motion';
+import { ThemeContext } from '../../../context/ThemeContext';
 import SkillsSpans from '../shared/SkillsSpans';
 import GithubLink from '../shared/GithubLink';
 
@@ -15,10 +16,12 @@ const WorkCard = ({
   customImgStyle,
   isVertical = true,
 }) => {
+  const { isDarkMode } = useContext(ThemeContext);
   const [isHovered, setIsHovered] = useState(false);
+
   return (
     <div
-      className={`custom-card flex h-[calc(100dvh-24px)] w-full items-center overflow-hidden tablet:h-[376px] tablet:flex-row ${isVertical ? 'flex-col-reverse desktop:col-span-3 desktop:row-span-6 desktop:h-full desktop:flex-col-reverse' : 'flex-col-reverse desktop:col-span-6 desktop:row-span-3 desktop:flex-row'} `}
+      className={`${isDarkMode ? 'custom-card-dark' : 'custom-card'} flex h-[calc(100dvh-24px)] w-full items-center overflow-hidden tablet:h-[376px] tablet:flex-row ${isVertical ? 'flex-col-reverse desktop:col-span-3 desktop:row-span-6 desktop:h-full desktop:flex-col-reverse' : 'flex-col-reverse desktop:col-span-6 desktop:row-span-3 desktop:flex-row'} `}
     >
       <div
         id="workcard-text"
@@ -26,11 +29,11 @@ const WorkCard = ({
       >
         <div className="space-y-1">
           <h2 className="text-2xl font-semibold">{title}</h2>
-          <p className="text-lg text-gray-700 tablet:text-base">
+          <p className="text-lg text-gray-700 dark:text-[#e7f5e7] tablet:text-base">
             {description}
           </p>
         </div>
-        <p className="line-clamp-6 text-justify text-base leading-relaxed text-gray-600 min-[450px]:line-clamp-none tablet:pb-3 tablet:text-sm">
+        <p className="line-clamp-6 text-justify text-base leading-relaxed text-gray-600 dark:text-[#e7f5e7] min-[450px]:line-clamp-none tablet:pb-3 tablet:text-sm">
           {details}
         </p>
         <SkillsSpans skills={skills} />

@@ -16,7 +16,7 @@ const SkillsSpans = ({ skills = [] }) => {
       {skills.map((skill, index) => (
         <motion.span
           key={index}
-          className="rounded-full bg-white px-3 py-1 text-sm font-medium text-gray-700 shadow-sm"
+          className="rounded-full bg-white px-3 py-1 text-sm font-medium text-gray-700 shadow-sm dark:bg-[rgba(60,60,60,0.8)] dark:text-[#e7f5e7]"
           variants={skillVariants}
           style={{
             transformStyle: 'preserve-3d',

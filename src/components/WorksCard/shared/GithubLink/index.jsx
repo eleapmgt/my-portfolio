@@ -23,7 +23,9 @@ const GithubLink = ({ githubLink }) => {
       }}
     >
       <GithubIcon />
-      <span className="relative top-1 text-base">Voir sur GitHub</span>
+      <span className="relative top-1 text-base dark:text-[#e7f5e7]">
+        Voir sur GitHub
+      </span>
     </motion.a>
   );
 };

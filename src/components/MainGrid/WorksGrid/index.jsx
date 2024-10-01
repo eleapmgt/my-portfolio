@@ -17,6 +17,7 @@ const WorkGrid = () => {
         imageSrcDesktop="/assets/images/works-grid/mon-vieux-grimoire/mvg-preview.png"
         imageSrcTablet="assets/images/works-grid/mon-vieux-grimoire/mvg-tablet.png"
         imageSrcMobile="assets/images/works-grid/mon-vieux-grimoire/mvg-preview.png"
+        customImgStyle="tablet:object-[40%]"
       />
       <WorkCard
         isVertical={false}

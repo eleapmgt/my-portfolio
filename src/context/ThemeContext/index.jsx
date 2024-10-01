@@ -3,22 +3,17 @@ import { createContext, useState, useEffect } from 'react';
 export const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(true); // Mode sombre toujours activé
 
   useEffect(() => {
-    const isDark = localStorage.getItem('theme') == 'dark';
-    setIsDarkMode(isDark);
-    if (isDark) {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
+    // Forcer l'activation du mode sombre dès le chargement
+    setIsDarkMode(true);
+    document.documentElement.classList.add('dark'); // Ajoute toujours la classe 'dark'
   }, []);
 
   const toggleDarkMode = () => {
     setIsDarkMode((prevMode) => {
       const newMode = !prevMode;
-      localStorage.setItem('theme', newMode);
       if (newMode) {
         document.documentElement.classList.add('dark');
       } else {

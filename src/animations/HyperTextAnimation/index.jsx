@@ -60,7 +60,7 @@ export function HyperText({
 
   return (
     <div className="flex scale-100 cursor-default overflow-hidden py-2">
-      <AnimatePresence mode="sync">
+      <AnimatePresence>
         {displayText.map((letter, i) => (
           <motion.h1
             key={i}
