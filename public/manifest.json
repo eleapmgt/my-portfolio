@@ -1,0 +1,44 @@
+{
+  "name": "Eléa Pimouguet - Développeuse Web full stack",
+  "short_name": "Eléa Pimouguet",
+  "description": "Portfolio de Eléa Pimouguet, développeuse web full stack spécialisée en React.",
+  "lang": "fr",
+  "start_url": "",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#ffffff",
+  "theme_color": "#121212",
+  "categories": ["portfolio", "business", "personal"],
+  "icons": [
+    {
+      "src": "/path/to/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "/path/to/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/path/to/favicon-64x64.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    },
+    {
+      "src": "/path/to/favicon-128x128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "/path/to/favicon-256x256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "/path/to/favicon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
