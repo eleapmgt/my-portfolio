@@ -88,7 +88,7 @@ const Background = ({ disableAnimation = false }) => {
     return () => {
       cancelAnimationFrame(animationFrameId);
     };
-  }, [particles, dimensions, mousePosition, disableAnimation]);
+  }, [particles, dimensions, mousePosition, disableAnimation, isDarkMode]);
 
   const drawConnections = (ctx) => {
     for (let i = 0; i < particles.length; i++) {
