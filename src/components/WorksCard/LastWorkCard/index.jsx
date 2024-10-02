@@ -10,6 +10,23 @@ const LastWorkCard = () => {
   const skills = ['React', 'React Router', 'JavaScript', 'Sass', 'Responsive'];
   const [isHovered, setIsHovered] = useState(false);
   const videoRef = useRef(null);
+  const cardRef = useRef(null);
+
+  useEffect(() => {
+    const setCardHeight = () => {
+      if (cardRef.current && window.innerWidth < 768) {
+        const vh = window.innerHeight;
+        cardRef.current.style.height = `${vh}px`;
+      }
+    };
+
+    setCardHeight();
+    window.addEventListener('resize', setCardHeight);
+
+    return () => {
+      window.removeEventListener('resize', setCardHeight);
+    };
+  }, []);
 
   useEffect(() => {
     if (isHovered && videoRef.current) {
@@ -35,19 +52,20 @@ const LastWorkCard = () => {
 
   return (
     <div
-      className={`${isDarkMode ? 'custom-card-dark' : 'custom-card'} flex h-[calc(100dvh-24px)] w-full flex-col-reverse items-center overflow-hidden tablet:col-span-9 tablet:row-span-3 tablet:h-[376px] tablet:flex-row`}
+      ref={cardRef}
+      className={`${isDarkMode ? 'custom-card-dark' : 'custom-card'} flex max-h-[812px] min-h-[600px] w-full flex-col-reverse items-center overflow-hidden tablet:col-span-9 tablet:row-span-3 tablet:h-[376px] tablet:max-h-[376px] tablet:min-h-[376px] tablet:flex-row`}
     >
       <div
         id="card-text"
-        className="flex h-3/5 w-full flex-col items-start justify-between space-y-3 p-6 text-justify min-[600px]:p-10 tablet:h-full tablet:w-2/3 tablet:justify-center desktop:w-7/12 desktop:p-20"
+        className="flex h-3/5 w-full flex-col items-start justify-between space-y-3 p-6 min-[600px]:p-10 tablet:h-full tablet:w-2/3 tablet:justify-center desktop:w-7/12 desktop:p-20"
       >
         <div className="space-y-1">
-          <h2 className="text-2xl font-semibold">Kasa Website</h2>
+          <h2 className="text-left text-2xl font-semibold">Kasa Website</h2>
           <p className="text-lg text-gray-700 dark:text-[#e7f5e7] tablet:text-base">
             Plateforme de location immobilière
           </p>
         </div>
-        <div className="line-clamp-6 text-base leading-relaxed text-gray-600 dark:text-[#e7f5e7] min-[600px]:line-clamp-none tablet:pb-0 tablet:text-sm desktop:pb-3">
+        <div className="line-clamp-4 text-justify text-base leading-relaxed text-gray-600 dark:text-[#e7f5e7] tablet:line-clamp-none tablet:pb-0 tablet:text-sm desktop:pb-3">
           Le projet consistait à développer le front-end de l&apos;application
           avec React et React Router pour optimiser l&apos;expérience
           utilisateur et la navigation. L&apos;interface responsive a été

@@ -28,7 +28,7 @@ const EducationCard = () => {
     onSwipedLeft: nextCourse,
     onSwipedRight: prevCourse,
     preventDefaultTouchmoveEvent: true,
-    trackMouse: true,
+    trackTouch: true,
   });
 
   return (
