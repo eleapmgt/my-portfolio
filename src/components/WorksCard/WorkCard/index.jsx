@@ -51,7 +51,7 @@ const WorkCard = ({
             {description}
           </p>
         </div>
-        <p className="line-clamp-4 text-justify text-base leading-relaxed text-gray-600 dark:text-[#e7f5e7] tablet:line-clamp-none tablet:pb-3 tablet:text-sm">
+        <p className="min-w-[400px]:line-clamp-4 line-clamp-2 text-justify text-base leading-relaxed text-gray-600 dark:text-[#e7f5e7] tablet:line-clamp-none tablet:pb-3 tablet:text-sm">
           {details}
         </p>
         <SkillsSpans skills={skills} />

@@ -65,7 +65,7 @@ const LastWorkCard = () => {
             Plateforme de location immobilière
           </p>
         </div>
-        <div className="line-clamp-4 text-justify text-base leading-relaxed text-gray-600 dark:text-[#e7f5e7] tablet:line-clamp-none tablet:pb-0 tablet:text-sm desktop:pb-3">
+        <div className="min-w-[400px]:line-clamp-4 line-clamp-2 text-justify text-base leading-relaxed text-gray-600 dark:text-[#e7f5e7] tablet:line-clamp-none tablet:pb-0 tablet:text-sm desktop:pb-3">
           Le projet consistait à développer le front-end de l&apos;application
           avec React et React Router pour optimiser l&apos;expérience
           utilisateur et la navigation. L&apos;interface responsive a été
