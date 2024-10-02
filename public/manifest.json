@@ -11,32 +11,32 @@
   "categories": ["portfolio", "business", "personal"],
   "icons": [
     {
-      "src": "/path/to/favicon-16x16.png",
+      "src": "/icons/favicon/favicon_16.png",
       "sizes": "16x16",
       "type": "image/png"
     },
     {
-      "src": "/path/to/favicon-32x32.png",
+      "src": "/icons/favicon/favicon_32.png",
       "sizes": "32x32",
       "type": "image/png"
     },
     {
-      "src": "/path/to/favicon-64x64.png",
+      "src": "/icons/favicon/favicon_64.png",
       "sizes": "64x64",
       "type": "image/png"
     },
     {
-      "src": "/path/to/favicon-128x128.png",
+      "src": "/icons/favicon/favicon_128.png",
       "sizes": "128x128",
       "type": "image/png"
     },
     {
-      "src": "/path/to/favicon-256x256.png",
+      "src": "/icons/favicon/favicon_256.png",
       "sizes": "256x256",
       "type": "image/png"
     },
     {
-      "src": "/path/to/favicon-512x512.png",
+      "src": "/icons/favicon/favicon_512.png",
       "sizes": "512x512",
       "type": "image/png"
     }

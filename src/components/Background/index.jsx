@@ -12,6 +12,7 @@ const COLORS = {
 const Background = ({ disableAnimation = false }) => {
   const { isDarkMode } = useContext(ThemeContext);
   const canvasRef = useRef(null);
+  const [isMobile, setIsMobile] = useState(false);
   const [particles, setParticles] = useState([]);
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -36,12 +37,10 @@ const Background = ({ disableAnimation = false }) => {
   useEffect(() => {
     const handleResize = () => {
       if (canvasRef.current) {
-        const width = window.innerWidth;
-        const height = window.innerHeight;
+        const { width, height } = canvasRef.current.getBoundingClientRect();
         setDimensions({ width, height });
-        canvasRef.current.width = width;
-        canvasRef.current.height = height;
         initializeParticles(width, height);
+        setIsMobile(width < 768);
       }
     };
 
@@ -91,7 +90,7 @@ const Background = ({ disableAnimation = false }) => {
     return () => {
       cancelAnimationFrame(animationFrameId);
     };
-  }, [particles, dimensions, mousePosition, disableAnimation, isDarkMode]);
+  }, [particles, dimensions, mousePosition, disableAnimation]);
 
   const drawConnections = (ctx) => {
     for (let i = 0; i < particles.length; i++) {
@@ -113,6 +112,7 @@ const Background = ({ disableAnimation = false }) => {
   };
 
   const handleMouseMove = (event) => {
+    if (isMobile) return;
     const canvas = canvasRef.current;
     if (!canvas) return;
 
@@ -131,13 +131,17 @@ const Background = ({ disableAnimation = false }) => {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <canvas
-        ref={canvasRef}
-        width={dimensions.width}
-        height={dimensions.height}
-        className="h-full w-full"
-        onMouseMove={handleMouseMove}
-      />
+      {isMobile ? (
+        <div className="h-full w-full bg-[#121212]" />
+      ) : (
+        <canvas
+          ref={canvasRef}
+          width={dimensions.width}
+          height={dimensions.height}
+          className="h-full w-full"
+          onMouseMove={handleMouseMove}
+        />
+      )}
     </motion.div>
   );
 };
