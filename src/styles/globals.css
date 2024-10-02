@@ -67,7 +67,7 @@
 }
 
 body {
-  @apply relative h-full w-full bg-[url('./assets/texture.jpg')] bg-[length:64px_64px] bg-fixed bg-repeat text-custom-text;
+  @apply relative h-full w-full text-custom-text;
 }
 
 img {
