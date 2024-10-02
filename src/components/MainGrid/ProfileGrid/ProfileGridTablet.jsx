@@ -17,30 +17,28 @@ const ProfileGridTablet = () => {
       className="hidden tablet:mx-3 tablet:flex tablet:flex-row tablet:gap-3 desktop:hidden"
     >
       <div id="tablet-left-side" className="flex w-1/2 flex-col gap-3">
-        <div id="tablet-profile" className="h-[calc(2*(100vh-48px)/5)]">
+        <div id="tablet-profile" className="h-[350px]">
           <ProfileCard />
         </div>
-        <div id="tablet-msg" className="h-[calc((100vh-48px)/5)]">
+        <div id="tablet-msg" className="h-[175px]">
           <ContactFormModal />
         </div>
-        <div
-          id="tablet-summmary-project"
-          className="h-[calc(2*(100vh-48px)/5)]"
-        >
+        <div id="tablet-summmary-project" className="h-[350px]">
           <SummaryLastProjectCard />
         </div>
       </div>
       <div id="tablet-right-side" className="flex w-1/2 flex-col gap-3">
-        <div
-          id="tablet-cv-skills"
-          className="flex h-[calc(2*(100vh-48px)/5)] flex-col gap-3"
-        >
-          <CurriculumCard />
-          <SkillsCard />
+        <div id="tablet-cv-skills" className="flex h-[350px] flex-col gap-3">
+          <div className="h-1/2">
+            <CurriculumCard />
+          </div>
+          <div className="h-1/2">
+            <SkillsCard />
+          </div>
         </div>
         <div
           id="tablet-github-linkedin"
-          className="grid h-[calc((100vh-48px)/5)] grid-cols-2 grid-rows-1 gap-3"
+          className="grid h-[175px] grid-cols-2 grid-rows-1 gap-3"
         >
           <IconCard
             iconRef="https://github.com/eleapmgt"
@@ -53,7 +51,7 @@ const ProfileGridTablet = () => {
             description="Icône de Linkedin"
           />
         </div>
-        <div id="tablet-education" className="h-[calc(2*(100vh-48px)/5)]">
+        <div id="tablet-education" className="h-[350px]">
           <EducationCard />
         </div>
       </div>
