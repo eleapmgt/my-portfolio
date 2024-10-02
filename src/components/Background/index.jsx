@@ -36,8 +36,11 @@ const Background = ({ disableAnimation = false }) => {
   useEffect(() => {
     const handleResize = () => {
       if (canvasRef.current) {
-        const { width, height } = canvasRef.current.getBoundingClientRect();
+        const width = window.innerWidth;
+        const height = window.innerHeight;
         setDimensions({ width, height });
+        canvasRef.current.width = width;
+        canvasRef.current.height = height;
         initializeParticles(width, height);
       }
     };
@@ -88,7 +91,7 @@ const Background = ({ disableAnimation = false }) => {
     return () => {
       cancelAnimationFrame(animationFrameId);
     };
-  }, [particles, dimensions, mousePosition, disableAnimation]);
+  }, [particles, dimensions, mousePosition, disableAnimation, isDarkMode]);
 
   const drawConnections = (ctx) => {
     for (let i = 0; i < particles.length; i++) {
