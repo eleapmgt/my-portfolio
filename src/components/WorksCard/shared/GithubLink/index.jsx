@@ -7,7 +7,7 @@ const GithubLink = ({ githubLink }) => {
       href={githubLink}
       target="_blank"
       rel="noopener noreferrer"
-      aria-label="Lien vers le compte GitHub"
+      aria-label="Voir le code source du projet sur GitHub"
       className="inline-flex min-w-full items-end justify-center gap-2 rounded-2xl bg-black pb-6 pt-4 text-white tablet:min-w-0 tablet:justify-normal tablet:bg-transparent tablet:px-0 tablet:pb-0 tablet:pt-0 tablet:text-[#313132] desktop:pt-2"
       style={{
         transformStyle: 'preserve-3d',
@@ -23,7 +23,7 @@ const GithubLink = ({ githubLink }) => {
       }}
     >
       <GithubIcon />
-      <span className="relative top-1 text-base dark:text-[#e7f5e7]">
+      <span className="relative top-1 text-base dark:text-[#e7f5e7] dark:opacity-90">
         Voir sur GitHub
       </span>
     </motion.a>

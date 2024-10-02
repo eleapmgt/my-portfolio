@@ -37,7 +37,8 @@ const SunIcon = ({ isHovered }) => {
       viewBox="0 0 24 24"
       strokeWidth={1}
       stroke={`${isDarkMode ? '#f7fff7' : 'currentColor'}`}
-      title="Icône d'un soleil représentant le Light Mode"
+      aria-label="Icône d'un soleil correspondant au Light Mode"
+      role="img"
       className="size-12"
       animate={controls}
       style={{ originX: 0.5, originY: 0.5 }}

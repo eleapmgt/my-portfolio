@@ -6,7 +6,7 @@ const COLORS = {
   BLEU_PROFOND: '#121212',
   VERT_SARCELLE: '#50A3AB',
   JAUNE_SUBTIL: '#FADAC1',
-  VIOLET_PASTEL: '#CCA9DD',
+  VIOLET_PASTEL: '#F5F5F5',
 };
 
 const Background = ({ disableAnimation = false }) => {

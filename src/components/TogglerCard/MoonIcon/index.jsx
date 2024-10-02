@@ -12,7 +12,8 @@ const MoonIcon = ({ isHovered }) => {
       viewBox="0 0 24 24"
       strokeWidth="1.2"
       stroke={`${isDarkMode ? '#f7fff7' : 'currentColor'}`}
-      title="Icône d'une lune correspondant au Dark Mode"
+      aria-label="Icône d'une lune correspondant au Dark Mode"
+      role="img"
       className="size-9"
       animate={isHovered ? 'hover' : 'initial'}
       variants={{

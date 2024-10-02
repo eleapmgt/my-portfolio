@@ -20,10 +20,14 @@ const CurriculumCard = () => {
     <>
       <div
         className={`${isDarkMode ? 'custom-card-dark' : 'custom-card'} flex h-[calc((100vh-60px)/5)] w-full items-center justify-between tablet:h-full desktop:col-span-1 desktop:row-span-1 desktop:h-full`}
+        role="region"
+        aria-labelledby="curriculum-vitae"
       >
         <div className="flex flex-col pl-12">
-          <h3 className="text-lg font-bold uppercase">Curriculum Vitae</h3>
-          <span>2024</span>
+          <h3 id="curriculum-vitae" className="text-lg font-semibold uppercase">
+            Curriculum Vitae
+          </h3>
+          <span className="dark:opacity-90">2024</span>
         </div>
         <div className="flex flex-row items-center gap-4 pr-12">
           <motion.a
@@ -35,6 +39,8 @@ const CurriculumCard = () => {
             animate={isPlaying ? { scale: 1.1 } : { scale: 1 }}
             transition={{ duration: 0.3 }}
             aria-label="Télécharger le CV"
+            role="button"
+            tabIndex={0}
           >
             <Lottie
               loop
@@ -56,7 +62,13 @@ const CurriculumCard = () => {
             role="button"
             aria-label="Visualiser le CV"
             onClick={openPDFInNewTab}
+            tabIndex={0}
             className="cursor-pointer"
+            onKeyPress={(e) => {
+              if (e.key === 'Enter' || e.key === ' ') {
+                openPDFInNewTab();
+              }
+            }}
           >
             <Lottie
               loop

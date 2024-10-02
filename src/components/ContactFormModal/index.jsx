@@ -35,6 +35,7 @@ const ContactFormModal = () => {
         animate="initial"
         whileHover="hover"
         className={`${isDarkMode ? 'custom-card-dark' : 'custom-card'} flex h-full w-full items-center justify-center tablet:col-span-1 tablet:row-span-1`}
+        aria-label="Ouvrir le formulaire de contact"
       >
         <motion.img
           src={`${isDarkMode ? '/icons/mail-white.png' : '/icons/mail-black.png'}`}
@@ -66,6 +67,9 @@ const ContactFormModal = () => {
             animate={{ opacity: 1, backdropFilter: 'blur(10px)' }}
             exit={{ opacity: 0, backdropFilter: 'blur(0px)' }}
             className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-20"
+            aria-modal="true"
+            role="dialog"
+            aria-labelledby="contact-form-title"
           >
             <Overlay />
             <motion.div
@@ -87,7 +91,10 @@ const ContactFormModal = () => {
               className="relative z-50 w-full max-w-lg space-y-6 rounded-3xl bg-white p-10 shadow-xl dark:border dark:border-gray-200/20 dark:bg-[#1f1f1f]"
             >
               <CloseIcon onClick={toggleModal} />
-              <h2 className="text-left text-2xl font-semibold dark:text-[#f7fff7]">
+              <h2
+                id="contact-form-title"
+                className="text-left text-3xl font-medium dark:text-[#f7fff7]"
+              >
                 Me contacter
               </h2>
               <form onSubmit={handleSubmit} className="flex flex-col space-y-8">
@@ -107,6 +114,7 @@ const ContactFormModal = () => {
                       required
                       className="w-full rounded-lg border border-gray-300 px-4 py-2 pl-10 outline-none transition duration-200 focus:border-transparent focus:ring-2 focus:ring-gray-200 dark:text-[#313132]"
                       placeholder="votre@email.com"
+                      aria-label="Entrez votre adresse email"
                     />
                   </div>
                   <ValidationError
@@ -132,6 +140,7 @@ const ContactFormModal = () => {
                       required
                       className="w-full resize-none rounded-lg border border-gray-300 px-4 py-2 pl-10 outline-none transition duration-200 focus:border-transparent focus:ring-2 focus:ring-gray-200 dark:text-[#313132]"
                       placeholder="Votre message ici..."
+                      aria-label="Entrez votre message"
                     />
                   </div>
                   <ValidationError
@@ -145,14 +154,15 @@ const ContactFormModal = () => {
                   <motion.button
                     type="submit"
                     disabled={state.submitting}
-                    className="dark:shadow-customShadow w-full transform rounded-lg bg-[#313132] px-4 py-2 text-white transition duration-200 ease-in-out hover:scale-105 active:scale-95 dark:border dark:border-gray-200/20 dark:bg-[rgba(83,82,82,1)] dark:text-[#f7fff7] dark:hover:bg-[#414142]"
+                    className="w-full transform rounded-lg bg-[#313132] px-4 py-2 text-white transition duration-200 ease-in-out hover:scale-105 active:scale-95 dark:border dark:border-gray-200/20 dark:bg-[rgba(83,82,82,1)] dark:text-[#f7fff7] dark:shadow-customShadow dark:hover:bg-[#414142]"
+                    aria-label="Envoyer le message"
                   >
                     {state.submitting ? 'Envoi en cours...' : 'Envoyer'}
                   </motion.button>
                 </div>
               </form>
               {state.succeeded && (
-                <div className="pt-2 font-semibold text-green-600">
+                <div className="pt-2 font-semibold text-green-600" role="alert">
                   Merci pour votre message ! 😊
                 </div>
               )}
@@ -203,6 +213,7 @@ const CloseIcon = ({ onClick }) => {
         strokeLinecap="round"
         strokeLinejoin="round"
         className="h-5 w-5 text-black dark:text-[#f7fff7]"
+        aria-label="Fermer le formulaire"
       >
         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
         <path d="M18 6l-12 12" />

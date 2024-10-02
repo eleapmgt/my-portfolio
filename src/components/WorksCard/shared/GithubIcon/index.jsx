@@ -20,6 +20,7 @@ const GithubIcon = ({ isMobile, isTablet }) => {
       width="16"
       height="16"
       color={getColor()}
+      aria-hidden="true"
       fill="none"
     >
       <path

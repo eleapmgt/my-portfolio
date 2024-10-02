@@ -14,6 +14,13 @@ const IconCard = ({ iconSrc, description, iconRef }) => {
       className={`${isDarkMode ? 'custom-card-dark' : 'custom-card'} flex items-center justify-center desktop:col-span-2 desktop:row-span-1`}
       animate="initial"
       whileHover="hover"
+      role="link"
+      tabIndex={0}
+      onKeyPress={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          window.open(iconRef, '_blank');
+        }
+      }}
     >
       <motion.img
         src={iconSrc}

@@ -10,7 +10,7 @@ const WorkGrid = () => {
       <LastWorkCard />
       <WorkCard
         title="Mon Vieux Grimoire"
-        description="Référencement et de notation de livres"
+        description="Référencement et notation de livres"
         details="Développement du back-end avec Express et MongoDB, en veillant à la sécurisation des opérations CRUD et à la gestion des authentifications et fichiers utilisateurs, avec une architecture MVC."
         skills={['Node.js', 'Express', 'MongoDB', 'Mongoose', 'JWT']}
         githubLink="https://github.com/eleapmgt/Mon-Vieux-Grimoire-website"

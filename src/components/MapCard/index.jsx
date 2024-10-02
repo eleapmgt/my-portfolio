@@ -13,9 +13,10 @@ const MapCard = () => {
 
   return (
     <>
-      <div
+      <article
         className={`${isDarkMode ? 'desktop:custom-card-dark' : 'desktop:custom-card'} hidden desktop:col-span-1 desktop:row-span-1 desktop:flex desktop:items-center desktop:justify-center desktop:overflow-hidden`}
         onMouseEnter={handleMouseEnter}
+        aria-label="Carte animée représentant Bordeaux avec ses coordonnées"
       >
         <div className="absolute left-7 top-5 z-10 font-mono uppercase">
           Bordeaux
@@ -30,7 +31,7 @@ const MapCard = () => {
         <div className="absolute -bottom-9 -right-6 h-full w-full">
           <Earth size={300} />
         </div>
-      </div>
+      </article>
     </>
   );
 };

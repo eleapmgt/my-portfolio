@@ -51,21 +51,27 @@ const LastWorkCard = () => {
   };
 
   return (
-    <div
+    <article
       ref={cardRef}
       className={`${isDarkMode ? 'custom-card-dark' : 'custom-card'} flex max-h-[812px] min-h-[600px] w-full flex-col-reverse items-center overflow-hidden tablet:col-span-9 tablet:row-span-3 tablet:h-[376px] tablet:max-h-[376px] tablet:min-h-[376px] tablet:flex-row`}
+      aria-labelledby="last-work-title"
     >
       <div
         id="card-text"
-        className="flex h-3/5 w-full flex-col items-start justify-between space-y-3 p-6 min-[600px]:p-10 tablet:h-full tablet:w-2/3 tablet:justify-center desktop:w-7/12 desktop:p-20"
+        className="flex h-3/5 w-full flex-col items-start justify-between space-y-3 p-6 min-[600px]:p-10 tablet:h-full tablet:w-2/3 tablet:justify-center tablet:space-y-4 desktop:w-7/12 desktop:p-20"
       >
-        <div className="space-y-1">
-          <h2 className="text-left text-2xl font-semibold">Kasa Website</h2>
-          <p className="text-lg text-gray-700 dark:text-[#e7f5e7] tablet:text-base">
+        <header className="space-y-1">
+          <h2
+            id="last-work-title"
+            className="text-left text-2xl font-medium tracking-wide desktop:text-3xl"
+          >
+            Kasa Website
+          </h2>
+          <p className="desktop:font-regular text-lg text-gray-700 dark:text-[#e7f5e7] tablet:text-base desktop:text-xl">
             Plateforme de location immobilière
           </p>
-        </div>
-        <div className="min-w-[400px]:line-clamp-4 line-clamp-2 text-justify text-base leading-relaxed text-gray-600 dark:text-[#e7f5e7] tablet:line-clamp-none tablet:pb-0 tablet:text-sm desktop:pb-3">
+        </header>
+        <div className="min-w-[400px]:line-clamp-4 line-clamp-2 text-justify text-base leading-relaxed text-gray-600 dark:font-light dark:text-[#ffffff] dark:opacity-60 tablet:line-clamp-none tablet:pb-0 tablet:text-sm desktop:pb-3 desktop:text-[15px]">
           Le projet consistait à développer le front-end de l&apos;application
           avec React et React Router pour optimiser l&apos;expérience
           utilisateur et la navigation. L&apos;interface responsive a été
@@ -74,7 +80,10 @@ const LastWorkCard = () => {
           des menus déroulants et la galerie d&apos;images interactive.
         </div>
         <SkillsSpans skills={skills} />
-        <GithubLink githubLink="https://github.com/eleapmgt/kasa-website" />
+        <GithubLink
+          githubLink="https://github.com/eleapmgt/kasa-website"
+          aria-label="Voir le code source de Kasa Website sur GitHub"
+        />
       </div>
 
       {/* Image for mobile and tablet */}
@@ -117,13 +126,14 @@ const LastWorkCard = () => {
             loop={false}
             muted
             playsInline
+            aria-label="Vidéo de présentation du site Kasa"
           >
             <source src={VideoKasa} type="video/mp4" />
             Votre navigateur ne supporte pas la lecture de vidéos.
           </video>
         </div>
       </div>
-    </div>
+    </article>
   );
 };
 

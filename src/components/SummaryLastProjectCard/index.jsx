@@ -15,8 +15,16 @@ const SummaryLastProjectCard = () => {
     }
   }, []);
   return (
-    <motion.div
+    <motion.article
       onClick={handleClick}
+      onKeyPress={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          handleClick();
+        }
+      }}
+      role="button"
+      tabIndex={0}
+      aria-label="Accéder à mon dernier projet"
       className={`${isDarkMode ? 'tablet:custom-card-dark' : 'custom-card'} tablet:auto hidden dark:text-[#f7fff7] tablet:flex tablet:h-full tablet:cursor-pointer tablet:flex-row tablet:items-center tablet:justify-center tablet:gap-5 tablet:overflow-hidden desktop:col-span-5 desktop:row-span-3`}
     >
       <div id="my-last-project-title" className="desktop:w-1/2">
@@ -31,7 +39,7 @@ const SummaryLastProjectCard = () => {
           <ArrowUpRightIcon className="h-8 w-8 dark:text-black" />
         </button>
       </div>
-    </motion.div>
+    </motion.article>
   );
 };
 

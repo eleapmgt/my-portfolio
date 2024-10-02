@@ -22,7 +22,7 @@ export default {
           '0 1px 0 0 rgba(255, 255, 255, 0.1) inset, 0 -1px 0 0 rgba(0, 0, 0, 0.2) inset, 0 1px 2px 0 rgba(0, 0, 0, 0.3)',
       },
       fontFamily: {
-        sans: ['Poppins', 'Arial', 'sans-serif'],
+        sans: ['Geist', 'Arial', 'sans-serif'],
       },
       colors: {
         'custom-text': '#313132',
