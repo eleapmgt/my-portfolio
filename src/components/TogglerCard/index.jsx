@@ -14,7 +14,7 @@ const TogglerCard = () => {
     >
       <button
         id="sun-toggle"
-        className={`relative flex h-full w-full flex-1 items-center justify-center ${!isDarkMode ? 'rounded-2xl bg-white shadow-sm dark:bg-[rgba(60,60,60,0.8)]' : ''}`}
+        className={`relative flex h-full w-full flex-1 items-center justify-center ${!isDarkMode ? 'rounded-2xl bg-[#ECECED] shadow-sm dark:bg-[rgba(60,60,60,0.8)]' : ''}`}
         onClick={toggleDarkMode}
         onMouseEnter={() => setIsSunHovered(true)}
         onMouseLeave={() => setIsSunHovered(false)}
