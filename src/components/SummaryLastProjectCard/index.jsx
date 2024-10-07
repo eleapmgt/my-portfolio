@@ -36,13 +36,13 @@ const SummaryLastProjectCard = () => {
       </div>
       <div className="flex w-1/4 items-end justify-center">
         <motion.button
-          className="flex h-16 w-16 items-center justify-center rounded-full bg-[#313132] text-white dark:bg-[#f7fff7]"
-          initial={{ scale: 1 }}
+          className="flex h-20 w-20 items-center justify-center rounded-full bg-[#313132] text-white dark:bg-[#f7fff7]"
+          initial={{ scale: 0.9 }}
           whileHover={{
-            scale: 1.1,
+            scale: 1,
             transition: { type: 'spring', stiffness: 300, damping: 15 },
           }}
-          whileTap={{ scale: 0.95, transition: { duration: 0.2 } }}
+          whileTap={{ scale: 0.9, transition: { duration: 0.2 } }}
         >
           <ArrowUpRightIcon className="h-8 w-8 dark:text-black" />
         </motion.button>
