@@ -15,6 +15,7 @@ const SummaryLastProjectCard = () => {
       window.scrollTo({ top: y, behavior: 'smooth' });
     }
   }, []);
+
   return (
     <motion.article
       onClick={handleClick}
@@ -34,9 +35,17 @@ const SummaryLastProjectCard = () => {
         <FlipTextAnimation text="PROJET" cnSpan="font-semibold" />
       </div>
       <div className="flex w-1/4 items-end justify-center">
-        <button className="flex h-16 w-16 items-center justify-center rounded-full bg-[#313132] text-white transition-transform hover:scale-110 hover:bg-black dark:bg-[#f7fff7]">
+        <motion.button
+          className="flex h-16 w-16 items-center justify-center rounded-full bg-[#313132] text-white dark:bg-[#f7fff7]"
+          initial={{ scale: 1 }}
+          whileHover={{
+            scale: 1.1,
+            transition: { type: 'spring', stiffness: 300, damping: 15 },
+          }}
+          whileTap={{ scale: 0.95, transition: { duration: 0.2 } }}
+        >
           <ArrowUpRightIcon className="h-8 w-8 dark:text-black" />
-        </button>
+        </motion.button>
       </div>
     </motion.article>
   );
