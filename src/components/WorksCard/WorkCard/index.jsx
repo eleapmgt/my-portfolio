@@ -39,12 +39,12 @@ const WorkCard = ({
   return (
     <article
       ref={cardRef}
-      className={`${isDarkMode ? 'custom-card-dark' : 'custom-card'} flex max-h-[812px] min-h-[600px] w-full items-center overflow-hidden tablet:h-[376px] tablet:max-h-[376px] tablet:min-h-[376px] tablet:flex-row ${isVertical ? 'flex-col-reverse desktop:col-span-3 desktop:row-span-6 desktop:min-h-full desktop:flex-col-reverse' : 'flex-col-reverse desktop:col-span-6 desktop:row-span-3 desktop:flex-row'} `}
+      className={`${isDarkMode ? 'custom-card-dark' : 'custom-card'} flex h-[100lvh] w-full items-center overflow-hidden tablet:h-[376px] tablet:max-h-[376px] tablet:min-h-[376px] tablet:flex-row ${isVertical ? 'flex-col-reverse desktop:col-span-3 desktop:row-span-6 desktop:min-h-full desktop:flex-col-reverse' : 'flex-col-reverse desktop:col-span-6 desktop:row-span-3 desktop:flex-row'} `}
       aria-labelledby={`workcard-title-${title}`}
     >
       <div
         id="workcard-text"
-        className={`${isVertical ? 'desktop:h-1/2 desktop:w-[80%] desktop:px-0 desktop:pb-12 desktop:pl-0 desktop:pt-0' : 'desktop:w-7/12 desktop:pl-12 desktop:pr-6'} flex h-3/5 w-full flex-col items-start justify-between space-y-3 p-6 min-[600px]:p-10 tablet:h-full tablet:w-2/3 tablet:justify-evenly tablet:p-14 desktop:justify-center`}
+        className={`${isVertical ? 'desktop:h-1/2 desktop:w-[80%] desktop:px-0 desktop:pb-12 desktop:pl-0 desktop:pt-0' : 'desktop:w-7/12 desktop:pl-12 desktop:pr-6'} flex h-3/5 w-full flex-col items-start justify-between space-y-3 p-6 min-[600px]:p-10 tablet:h-full tablet:w-2/3 tablet:justify-evenly desktop:justify-center`}
       >
         <header className="space-y-1">
           <h2
@@ -57,7 +57,7 @@ const WorkCard = ({
             {description}
           </p>
         </header>
-        <p className="min-w-[400px]:line-clamp-4 line-clamp-2 text-justify text-base leading-relaxed text-gray-600 dark:font-light dark:text-[#ffffff] dark:opacity-60 tablet:line-clamp-none tablet:pb-3 tablet:text-sm desktop:text-[15px] desktop:font-normal">
+        <p className="min-w-[400px]:line-clamp-4 line-clamp-2 text-justify text-base leading-relaxed text-gray-600 dark:font-light dark:text-[#ffffff] dark:opacity-60 tablet:line-clamp-none tablet:pb-1 tablet:text-sm desktop:text-[15px] desktop:font-normal">
           {details}
         </p>
         <SkillsSpans skills={skills} />

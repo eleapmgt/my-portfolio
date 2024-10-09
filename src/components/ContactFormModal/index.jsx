@@ -154,7 +154,7 @@ const ContactFormModal = () => {
                   <motion.button
                     type="submit"
                     disabled={state.submitting}
-                    className="w-full transform rounded-lg bg-[#313132] px-4 py-2 text-white transition duration-200 ease-in-out hover:scale-105 active:scale-95 dark:border dark:border-gray-200/20 dark:bg-[rgba(83,82,82,1)] dark:text-[#f7fff7] dark:shadow-customShadow dark:hover:bg-[#414142]"
+                    className="w-full transform rounded-lg bg-[#313132] px-4 py-2 text-white transition duration-200 ease-in-out hover:scale-105 active:scale-95 dark:border dark:border-gray-200/20 dark:bg-[rgba(80,80,80,1)] dark:text-[#f7fff7] dark:shadow-customShadow dark:hover:bg-[#414142]"
                     aria-label="Envoyer le message"
                   >
                     {state.submitting ? 'Envoi en cours...' : 'Envoyer'}
