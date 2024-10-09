@@ -39,7 +39,7 @@ const WorkCard = ({
   return (
     <article
       ref={cardRef}
-      className={`${isDarkMode ? 'custom-card-dark' : 'custom-card'} flex h-[100lvh] w-full items-center overflow-hidden tablet:h-[376px] tablet:max-h-[376px] tablet:min-h-[376px] tablet:flex-row ${isVertical ? 'flex-col-reverse desktop:col-span-3 desktop:row-span-6 desktop:min-h-full desktop:flex-col-reverse' : 'flex-col-reverse desktop:col-span-6 desktop:row-span-3 desktop:flex-row'} `}
+      className={`${isDarkMode ? 'custom-card-dark' : 'custom-card'} flex max-h-[100lvh] min-h-[100lvh] w-full items-center overflow-hidden tablet:h-[376px] tablet:max-h-[376px] tablet:min-h-[376px] tablet:flex-row ${isVertical ? 'flex-col-reverse desktop:col-span-3 desktop:row-span-6 desktop:min-h-full desktop:flex-col-reverse' : 'flex-col-reverse desktop:col-span-6 desktop:row-span-3 desktop:flex-row'} `}
       aria-labelledby={`workcard-title-${title}`}
     >
       <div

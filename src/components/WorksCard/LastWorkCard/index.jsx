@@ -53,7 +53,7 @@ const LastWorkCard = () => {
   return (
     <article
       ref={cardRef}
-      className={`${isDarkMode ? 'custom-card-dark' : 'custom-card'} flex h-[100lvh] w-full flex-col-reverse items-center overflow-hidden tablet:col-span-9 tablet:row-span-3 tablet:h-[376px] tablet:max-h-[376px] tablet:min-h-[376px] tablet:flex-row`}
+      className={`${isDarkMode ? 'custom-card-dark' : 'custom-card'} flex max-h-[100lvh] min-h-[100lvh] w-full flex-col-reverse items-center overflow-hidden tablet:col-span-9 tablet:row-span-3 tablet:h-[376px] tablet:max-h-[376px] tablet:min-h-[376px] tablet:flex-row`}
       aria-labelledby="last-work-title"
     >
       <div
