@@ -132,7 +132,7 @@ const Background = ({ disableAnimation = false }) => {
         ref={canvasRef}
         width={dimensions.width}
         height={dimensions.height}
-        className="h-100lvh w-full"
+        className="h-[100lvh] w-full"
         onMouseMove={handleMouseMove}
       />
     </motion.div>
