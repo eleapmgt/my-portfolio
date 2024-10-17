@@ -6,7 +6,7 @@ const COLORS = {
   BLEU_PROFOND: '#121212',
   VERT_SARCELLE: '#50A3AB',
   JAUNE_SUBTIL: '#FADAC1',
-  VIOLET_PASTEL: '#F5F5F5',
+  ORANGE: '#FFFFFF',
 };
 
 const Background = ({ disableAnimation = false }) => {
@@ -58,13 +58,33 @@ const Background = ({ disableAnimation = false }) => {
     let animationFrameId;
 
     const render = () => {
-      ctx.fillStyle = isDarkMode ? COLORS.BLEU_PROFOND : COLORS.VIOLET_PASTEL;
-      ctx.fillRect(0, 0, dimensions.width, dimensions.height);
+      /*       ctx.fillStyle = isDarkMode ? COLORS.BLEU_PROFOND : COLORS.VIOLET_PASTEL;
+      ctx.fillRect(0, 0, dimensions.width, dimensions.height); */
+      if (isDarkMode) {
+        ctx.fillStyle = COLORS.BLEU_PROFOND;
+        ctx.fillRect(0, 0, dimensions.width, dimensions.height);
+      } else {
+        const gradient = ctx.createLinearGradient(
+          0,
+          0,
+          dimensions.width,
+          dimensions.height
+        );
+        gradient.addColorStop(0, '#E0F8F3');
+        gradient.addColorStop(0.15, '#ECD9FA');
+        gradient.addColorStop(0.3, '#FFF7F8');
+        gradient.addColorStop(0.5, '#B6ECF7');
+        gradient.addColorStop(0.65, '#D6E1FF');
+        gradient.addColorStop(0.8, '#EBE4FF');
+        gradient.addColorStop(1, '#E0F8F3');
+        ctx.fillStyle = gradient;
+        ctx.fillRect(0, 0, dimensions.width, dimensions.height);
+      }
 
       particles.forEach((particle) => {
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-        ctx.fillStyle = COLORS.JAUNE_SUBTIL;
+        ctx.fillStyle = isDarkMode ? COLORS.JAUNE_SUBTIL : COLORS.ORANGE;
         ctx.fill();
 
         particle.x +=
